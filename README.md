@@ -1,4 +1,4 @@
-# Practice of Biostatistics with R and rk.Teaching
+# Applied Biostatistics with R and rk.Teaching
 
 This repository contains the book **Applied Biostatistics with R**
 
