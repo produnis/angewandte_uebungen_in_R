@@ -1,6 +1,6 @@
 # Practice of Biostatistics with R and rk.Teaching
 
-This repository contains the book **Practice of Biostatistics with R and rk.Teaching**
+This repository contains the book **Applied Biostatistics with R**
 
 ## Author
 Alfredo Sánchez Alberca (asalber@ceu.es)
