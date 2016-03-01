@@ -149,7 +149,9 @@ urlcolor = magenta,          % color of external links
 %	COMMANDS FOR INDICATIONS
 %----------------------------------------------------------------------------------------
 \usepackage{menukeys}
-\renewmenumacro{\menu}[>]{paths}
+\newmenucolortheme{mycolors}{named}{white}{color1}{black}
+\changemenucolortheme{menus}{mycolors}
+\renewmenumacro{\menu}[>]{menus}
 %\newmenustylesimple*{botonstyle}{\textbf{\CurrentMenuElement}}
 %\renewmenumacro{\keys}{botonstyle}
 \newcommand{\button}[1]{\textsf{\small #1}}
