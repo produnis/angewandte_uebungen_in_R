@@ -104,40 +104,40 @@ urlcolor = magenta,          % color of external links
 \clubpenalty=10000
 \widowpenalty=10000 
 
-% Code listing formatting
-% \usepackage{listings}
-% \lstdefinelanguage{morejava}{morekeywords={String}}
-% \definecolor{vollgrau}{rgb}{0.9,0.9,0.9}
-% \definecolor{colKeys}{rgb}{0,0,1}
-% \definecolor{colIdentifier}{rgb}{0,0,0}
-% \definecolor{colComments}{rgb}{1,0.5,0}
-% \definecolor{colString}{rgb}{0,0.5,0}
-% \definecolor{colbackground}{rgb}{0.9,0.9,1}
-% \lstset{%
-%      language=R,
-%      float=hbp,%
-%      basicstyle=\ttfamily,%
-%      identifierstyle=\color{colIdentifier},%
-%      keywordstyle=\color{colKeys},%
-%      stringstyle=\color{colString},%ROMERO OTERO, JAVIER
-%      commentstyle=\color{colComments},%
-% %    columns=flexible,%
-% %    columns=fullflexible,%
-%      columns=fixed,
-%      tabsize=1,%
-%      extendedchars=true,%
-%      showspaces=false,%
-%      showstringspaces=false,%
-%      breaklines=true,%
-%      breakindent=10pt,%
-%      backgroundcolor=\color{colbackground},%
-%      breakautoindent=true,%
-%      captionpos=t,%
-%      xleftmargin=1em,%
-% %    xrightmargin=.5\fboxsep,%
-%      numbersep=1em,%
-%      escapechar=\# 
-% }
+Code listing formatting
+\usepackage{listings}
+\lstdefinelanguage{morejava}{morekeywords={String}}
+\definecolor{vollgrau}{rgb}{0.9,0.9,0.9}
+\definecolor{colKeys}{rgb}{0,0,1}
+\definecolor{colIdentifier}{rgb}{0,0,0}
+\definecolor{colComments}{rgb}{1,0.5,0}
+\definecolor{colString}{rgb}{0,0.5,0}
+\definecolor{colbackground}{rgb}{0.9,0.9,1}
+\lstset{%
+     language=R,
+     float=hbp,%
+     basicstyle=\ttfamily,%
+     identifierstyle=\color{colIdentifier},%
+     keywordstyle=\color{colKeys},%
+     stringstyle=\color{colString},%ROMERO OTERO, JAVIER
+     commentstyle=\color{colComments},%
+%    columns=flexible,%
+%    columns=fullflexible,%
+     columns=fixed,
+     tabsize=1,%
+     extendedchars=true,%
+     showspaces=false,%
+     showstringspaces=false,%
+     breaklines=true,%
+     breakindent=10pt,%
+     backgroundcolor=\color{colbackground},%
+     breakautoindent=true,%
+     captionpos=t,%
+     xleftmargin=1em,%
+%    xrightmargin=.5\fboxsep,%
+     numbersep=1em,%
+     escapechar=\#
+}
 
 % Set short or long depending on the version desired
 % \usepackage[corto]{optional}
@@ -156,6 +156,7 @@ urlcolor = magenta,          % color of external links
 %\renewmenumacro{\keys}{botonstyle}
 \newcommand{\button}[1]{\textsf{\small #1}}
 \newcommand{\option}[1]{\textsf{\small #1}}
+\newcommand{\mtab}[1]{\textsf{\small #1}}
 \newcommand{\field}[1]{\textsf{\small #1}}
 \newcommand{\command}[1]{\texttt{#1}}
 \newcommand{\variable}[1]{\textsf{\small #1}}
@@ -199,10 +200,10 @@ urlcolor = magenta,          % color of external links
 %----------------------------------------------------------------------------------------
 %	CHAPTERS 
 %----------------------------------------------------------------------------------------
-% \include{introduction_r/introduction_r}
-\include{chapters/frequency_distributions/frequency_distributions}
-% \include{statistics/statistics}
-% \include{linear_regression/linear_regression}
+% \include{chapters/introduction/introduction}
+% \include{chapters/frequency_distributions/frequency_distributions}
+% \include{chapters/statistics/statistics}
+\include{chapters/linear_regression/linear_regression}
 % \include{non_linear_regression/non_linear_regression}
 % \include{probability/probability}
 % \include{discrete_random_variables/discrete_random_variables}

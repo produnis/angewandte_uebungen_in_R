@@ -1,0 +1,256 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es)
+
+\chapter{Introduction to R and RKWard}\label{cha:introduction}
+
+\section{Introduction}
+The big computing power achieved by computers has made them powerful tools essentials for all those disciplines, such as
+Statistics, that require managing large volumes of data.
+Nowadays, nobody addresses a serious statistical study without the help of data analysis software. 
+
+\emph{R} is a powerful programming language that includes a lot of functions for representing and analyzing data. 
+It was developed by Robert Gentleman and Ross Ihaka at the university of Auckland in New Zealand, although now is
+maintained by a large scientific community all around the world.
+
+\begin{center}
+\includegraphics[scale=0.5]{chapters/introduction/img/Rlogo}
+\end{center} 
+
+The advantages of R with respect to other data analysis software like SPSS, SAS, Matlab, Minitqab or Excel, are
+multiple:
+\begin{itemize}
+\item It's open source software, what implies that it's free. 
+It can be downloaded from the web \url{http://www.r-project.org/}.
+\item It's multi-platform .
+There are versions for the main platforms: Windows, Macintosh, Linux, etc. 
+\item It's supported by a huge scientific community that uses the software as an standard for data analysis. 
+\item It has thousands of packages for performing any type of data analysis and graphics representations, from the most
+common to the most innovative and cutting edge statistical procedures that are not included in other software. 
+The packages are organized and documented in the CRAN (Comprehensive R Archive Network) repository, from where they
+can be downloaded for free. 
+In Spain there is a mirror of this repository in the web \url{http://cran.es.r-project.org/}.
+\item It's programmable, what means that the user can create easily their own functions or packages for specific data
+analysis.
+\item There are a lot of books, manuals and tutorials for free, that allow the learning even for advances uses
+in all kind of disciplines like Mathematics, Physics, Chemistry, Biology, Psychology, Medicine, etc. 
+\end{itemize}
+
+By default the working environment of R is the command line, what means that the computations are done with commands
+manually typed in a text window.
+However, there exists some graphical user interfaces (GUI) that ease its use, particularly for newbies.
+The GUI that we are going to use along these practices is \emph{RKWard}, developed by Thomas
+Friedrichsmeier, and the package rk.Teaching developed by Alfredo Sánchez Alberca in the CEU San Pablo
+University and specifically designed for teaching Statistics.
+
+The main goal of this chapter is to introduce the student to the use of RKWard and rk.Teaching, showing him the basic
+operations to enter and manipulate data.
+
+\section{Installation}
+\subsection{Installation of R}
+\begin{description}
+\item[Linux] In the Debian distribution and derivatives (Ubuntu, Kubuntu, etc.) is as easy as typing the following
+command in the command prompt
+\begin{lstlisting}
+> sudo apt-get install r-base-html r-cran-rcmdr r-cran-rodbc r-doc-html r-recommended
+\end{lstlisting}
+\item[Windows] Download from \url{http://cran.es.r-project.org/bin/windows/base/release.htm} the installation program,
+execute it and follow the instructions. 
+\end{description}
+
+\subsection{Intallation of RKWard and rk.Teaching}
+The GUI RKWard can be downloaded from the web \url{http://rkward.sourceforge.net/} where there are instructions for
+the different platforms.
+
+For Windows it is recommended to install the full package that contains R, RKWard and rk.Teaching available in  
+\url{http://aprendeconalf.es/rkteaching/}
+
+By default, the installation of R includes the basic packages for the most common operations or analysis.
+However, for other analysis is required to install additional packages, like for instance the package
+\variable{rkTeaching}, that includes menus and dialogs for most of the statistical procedures teached in these
+practices. 
+
+To install the package rk.Teching, first you have to download it from the web
+\url{http://asalber.github.io/rkTeaching/}, then start R or RKWard and enter the following command in the command
+console.
+\begin{lstlisting}
+> setwd("path_to_download")
+> install.packages("rk.Teaching",repos=NULL,dep=True)
+\end{lstlisting}
+
+For packages hosted in the CRAN, it's possible to install them from RKWard selecting the
+menu \menu{Settings > Manage R packages and plugins}.
+In the dialog displayed, select the \mtab{Install/Update/Remove R packages} tab, then search or select the desired
+package and click the button \button{OK}.
+After installing a package, to use it in a work session it must be loaded. 
+For that, in the same menu, select the \mtab{Load/Unload R packages} tab, then select the package, click the button
+\button{Load} and finally the button \button{OK}.
+
+
+\section{Solved exercises}
+\begin{enumerate}[leftmargin=*]
+\item Create a data set with the data in the sample below and save it with name \variable{colesterol.rda}
+\begin{center}
+\begin{tabular}{|l|c|r|r|r|}
+\hline
+\multicolumn{1}{|c|}{Name} & \multicolumn{1}{c|}{Gender} & \multicolumn{1}{c|}{Weight} & \multicolumn{1}{c|}{Height} &
+\multicolumn{1}{c|}{Cholesterol}\\
+\hline
+José Luis Martínez Izquierdo  & H &  85 & 179 & 182\\
+Rosa Díaz Díaz & F & 65 & 173 & 232\\
+Javier García Sánchez  & M & 71 & 181 & 191\\
+Carmen López Pinzón & F &  65 & 170 & 200\\
+Marisa López Collado & F &  51 & 158 & 148\\
+Antonio Ruiz Cruz & M & 66 & 174 & 249\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{indication}
+To create a data set:
+\begin{enumerate}
+\item Select the menu \menu{File > New > Dataset}.
+\item In the dialog displayed enter the name \variable{cholesterol} and click the button \button{OK}.
+\item In the data editor window, define a variable in every column giving a name for the variable in the \field{Name}
+row, a type (Numeric, Factor, String or Logical) in the \field{Type} row, and in the case of a factor, defining its
+levels in the \field{Levels} row.
+\item After define the variable, enter the data of every variable in the sample in the corresponding column.
+\end{enumerate}
+To save the data set:
+\begin{enumerate}
+\item Select the menu \menu{Workspace > Save Workspace}.
+\item In the dialog displayed give the name \variable{cholesterol.rda} to the file, select the folder where to save it
+and click the button \button{Save}.
+\end{enumerate}
+\end{indication}
+
+\item Define a new variable \variable{Age} with the ages of the individuals in the sample, between the variables
+\variable{Name} and \variable{Gender}.
+\begin{center}
+\begin{tabular}{|l|r|}
+\hline
+\multicolumn{1}{|c|}{Name} & \multicolumn{1}{c|}{Age} \\
+\hline
+José Luis Martínez Izquierdo & 18 \\
+Rosa Díaz Díaz & 32 \\
+Javier García Sánchez & 24 \\
+Carmen López Pinzón & 35 \\
+Marisa López Collado & 46 \\
+Antonio Ruiz Cruz & 68 \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{indication} 
+\begin{enumerate}
+\item Click the left tab \button{Workspace}.
+\item In the workspace window double-click the data set \variable{cholesterol} to edit it.
+\item In the data editor window, right-click the column header of the variable \variable{Gender} and select
+\menu{Insert new variable left}. 
+\item In the new empty column enter the name and type of the variable \variable{Age}, and enter the age of every
+individual.
+\end{enumerate}
+\end{indication}
+
+\item Insert the following data of a new individual:
+\begin{quote}
+Name: Cristóbal Campos Ruiz.\\
+Age: 44 years.\\
+Gender: Male.\\
+Weight: 70 Kg.\\
+Height: 178 cm.\\
+Cholesterol: 220 mg/dl.
+\end{quote}
+
+\begin{indication}
+\begin{enumerate}
+\item Insert the data of the new individual in the first empty row.
+\end{enumerate}
+\end{indication}
+
+\item Create a new variable with the body mass index of every individual using the formula
+\[
+\text{bmi} = \frac{\text{Weight (in Kg)}}{\text{Height (in m)}^2}
+\]
+
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Data > Compute variable}.
+\item In the dialog displayed enter the formula to compute the body mass index in the field \field{Variable
+computation}.
+\item In the field \field{Save as} click the button \button{Change}.
+\item In the dialog displayed select as a parent object the data set \variable{cholesterol} and click
+the button \button{OK}.
+\item Enter the name \variable{bmi} for the new variable and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Recode the body mass index variable into a new categorical variable \variable{Obesity} according to the following
+rules:
+\begin{center}
+\begin{tabular}{lcl}
+Less than de $18.5$ & \rightarrow & Low weight\\
+From $18.5$ to $24.5$ & \rightarrow & Healthy\\
+From $24.5$ to $30$ & \rightarrow & Overweight\\
+Greater than $30$  & \rightarrow & Obese
+\end{tabular}
+\end{center}
+
+\begin{indication}
+\begin{enumerate}
+\item Select the el menu \menu{Teaching > Data > Variable recoding}.
+\item In the dialog displayed insert the variable \variable{bmi} in the field \field{Variable to recode}.
+\item Enter the recoding rules below in the field \field{Recoding rules}:
+\begin{quote}
+\lstinline{lo:18.5 = 1}\\
+\lstinline{18.5:24.5 = 2}\\
+\lstinline{24.5:30 = 3}\\
+\lstinline{30:hi = 4}
+\end{quote}
+\item In the field \field{Save as} click the button \button{Change}.
+\item In the dialog displayed select as a parent object the data set \variable{cholesterol} and click the button
+\button{OK}.
+\item Enter the name \variable{Obesity} for the new variable and click the button \button{Submit}.
+\item In the data edition window, enter the levels for the \variable{Obesity} factor, setting the label ``Low weight''
+for the first category, ``Healthy'' for the second one, ``Overweight'' for the third and ``Obese'' for the fourth.
+\end{enumerate}
+\end{indication}
+
+
+\item Filter the data set to get a new data set with the data of males. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Data > Data filtering}.
+\item In the dialog displayed insert the data set \variable{cholesterol} in the field \field{Data set}.
+\item Insert the expression \lstinline{gender=="M"} in the field \field{Selection condition}.
+\item Enter the name \variable{cholesterol.males} for the new data set and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\end{enumerate}
+
+\section{Proposed exercises}
+\begin{enumerate}[leftmargin=*]
+\item The data set \variable{neonates} of the package \variable{rk.Teaching}, contains information about a
+sample of 320 newborns that meet the normal gestation time in a hospital during one year.
+Do the following operations:
+\begin{enumerate}
+\item Load the data set.
+\begin{indication}
+\begin{enumerate}
+\item Click the \field{Workspace} tab and double-click the \variable{rk.Teaching} package to unfold the data sets that
+it contains. 
+\item Right-click the data set \variable{nenonates} and select the menu \menu{Copy to .GlobalEnv} to copy the data
+set to the working environment.
+\end{enumerate}
+\end{indication}
+
+\item Compute the variable \variable{APGAR.average} as the mean of the variables \variable{APGAR1} and
+\variable{APGAR5}.
+\item Recode the variable \variable{weight} into the factor \variable{weight.category} with two categories
+corresponding to weights less than and greater than $2.5$ Kg.
+\item Recode the variable \variable{APGAR1} into the factor \variable{APGAR.state} with three categories: depressed
+(APGAR$\leq 3$), moderately depressed ($3<$APGAR$\leq 6$) and normal (APGAR$>6$).
+\item Filter the data set to get a new data set with the neonates of non-smoking mothers with an APGAR score at 1
+minute less than or equal to 3.
+How many neonates are there?
+\end{enumerate}
+\end{enumerate}

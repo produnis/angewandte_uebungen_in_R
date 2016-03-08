@@ -1,0 +1,400 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es)
+
+\chapter{Linear regression}\label{cha:linear-regression}
+
+\section{Solved exercises}
+\begin{enumerate}[leftmargin=*]
+\item The values of two variables $X$ and $Y$ measured in a sample of 10 individuals are:
+\[
+\begin{array}{lrrrrrrrrrr}
+\hline
+X & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+Y & 2 & 5 & 8 & 11 & 14 & 17 & 20 & 23 & 26 & 29\\
+\hline
+\end{array}
+\]
+
+Do the following operations:
+
+\begin{enumerate}
+\item Create a data set with the variables \variable{X} and \variable{Y} amd enter the data.
+\item Construct the scatter plot of \variable{X} and \variable{Y}.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Charts > Scatter plot}.
+\item In the dialog displayed, select the variable \variable{Y} in the field \field{Variable Y}, and the variable
+\variable{X} in the field \field{Variable X}, and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+According to the point cloud, what type of regression model explains better the relation between \variable{X} and
+\variable{Y}?
+
+\item Compute the regression line of $Y$ on $X$.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Regression > Linear regression}.
+\item In the dialog displayed, insert the variable \variable{Y} in the field \field{Dependent variable} and the variable
+\variable{X} in the field \field{Independent variable}, and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Plot the regression line on the scatter plot.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Charts > Scatter plot}.
+\item In the dialog displayed, insert the variable \variable{Y} in the field \field{Variable Y} and the
+variable \variable{X} in the field \field{Variable X}.
+\item In the \menu{Fitted line} tab, check the box \option{Linear} and click the button
+\button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute la regression line of $X$ on $Y$ and plot it on the scatter plot.
+\begin{indication}
+Repeat the steps of the previous part but inserting the variable \variable{X} in the field \field{Dependent variable}
+and the variable \variable{Y} in the field \field{Independent variable}. 
+\end{indication}
+
+\item How are the residuals?
+Comment the results.
+\end{enumerate}
+
+
+\item  En una licenciatura se quiere estudiar la relación entre el número medio de horas de estudio diarias and el número
+de asignaturas suspensas. Para ello se obtuvo la siguiente muestra:
+\[
+\begin{array}{cccccccc}
+\text{Horas} & \text{Suspensos} &  & \text{Horas} & \text{Suspensos} & & \text{Horas} & \text{Suspensos}  \\
+\cline{1-2}\cline{4-5}\cline{7-8}
+3.5 & 1 & & 2.2 & 2 & & 1.3 & 4 \\
+0.6 & 5 & & 3.3 & 0 & & 3.1 & 0 \\
+2.8 & 1 & & 1.7 & 3 & & 2.3 & 2 \\
+2.5 & 3 & & 1.1 & 3 & & 3.2 & 2 \\
+2.6 & 1 & & 2.0 & 3 & & 0.9 & 4 \\
+3.9 & 0 & & 3.5 & 0 & & 1.7 & 2 \\
+1.5 & 3 & & 2.1 & 2 & & 0.2 & 5 \\
+0.7 & 3 & & 1.8 & 2 & & 2.9 & 1 \\
+3.6 & 1 & & 1.1 & 4 & & 1.0 & 3 \\
+3.7 & 1 & & 0.7 & 4 & & 2.3 & 2 \\
+\end{array}
+\]
+
+Do the following operations:
+\begin{enumerate}
+\item  Create a data set con las variables \variable{horas.estudio} and \variable{suspensos} e introducir estos
+datos.
+
+\item Construir la frequency table bidimensional de las variables \variable{horas.estudio} and \variable{suspensos}. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Frequency distribution > Tabla de frecuencias bidimensional}.
+\item In the dialog displayed, select the variable \variable{horas.estudio} in the field \field{Variable
+a tabular en filas}, la variable \variable{suspensos} in the field \field{Variable a tabular en columnas}, and hacer clic
+sobre el botón \button{Submit}. 
+\end{enumerate}
+\end{indication}
+
+\item  Compute la regression line of \variable{suspensos} sobre \variable{horas.estudio} and dibujarla.
+\begin{indication}
+Para calcular la recta de regresión:
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Regression > Linear regression}.
+\item In the dialog displayed, select the variable \variable{suspensos} in the field \field{Variable
+dependiente} and la variable \variable{horas.estudio} in the field \field{Independent variable}, seleccionar
+\option{Guardar el modelo}, introducir un nombre para el modelo and click the button \button{Submit}.
+\end{enumerate}
+Para dibujar la recta de regresión:
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Charts > Scatter plot}.
+\item In the dialog displayed, select the variable \variable{suspensos} in the field \field{Variable Y} y
+la variable \variable{horas.estudio} in the field \field{Variable X}.
+\item En la solapa \menu{Fitted line}, seleccionar \option{Lineal} and click the button
+\button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Indicar el coeficiente de regresión de \variable{suspensos} sobre \variable{horas.estudio}. 
+¿Cómo lo interpretarías?
+\begin{indication}
+El coeficiente de regresión es la pendiente de la recta de regresión.
+\end{indication}
+
+\item La relación lineal entre estas dos variables, ¿es mejor o peor que la del ejercicio anterior? 
+Comentar los resultados a partir las gráficas de las rectas de regresión and sus residuos.
+
+\item Compute los coeficientes de correlación and de determinación lineal. 
+¿Es un buen modelo la recta de regresión?
+¿Qué porcentaje de la variabilidad del número de suspensos está explicada por el modelo?
+\begin{indication}
+El coeficiente de determinación aparece en la ventana de resultados como \result{R$^2$}, and el
+coeficiente de correlación es su raíz cuadrada.
+\end{indication}
+
+\item Utilizar la recta de regresión para predecir el número de suspensos correspondiente a 3 horas de estudio diarias.
+¿Es fiable esta predicción? 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Regression > Predicciones}.
+\item In the dialog displayed seleccionar como modelo de regresión la recta calculada en el segundo
+apartado, introducir los valores para los que se desea la predicción in the field \field{Predicciones para} and hacer clic
+sobre el botón \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Según el modelo lineal, ¿cuántas horas diarias tendrá que estudiar como mínimo un alumno si quiere aprobarlo
+todo?
+\begin{indication}
+Seguir los mismos pasos de los apartados anteriores, pero escogiendo como variable dependiente \variable{horas.estudio},
+y como independiente \variable{suspensos}, and haciendo la predicción para 0 suspensos.
+\end{indication}
+\end{enumerate}
+
+
+\item Después de tomar un litro de vino se ha medido la concentración de alcohol en la sangre en distintos instantes,
+obteniendo:
+\[
+\begin{array}{lrrrrrrr}
+\hline 
+\mbox{Tiempo después (minutos)} & 30 & 60 & 90 & 120 & 150 & 180 & 210\\ 
+\mbox{Concentración (gramos/litro)} & 1.6 & 1.7 & 1.5 & 1.1 & 0.7 & 0.2 & 2.1\\
+\hline
+\end{array}
+\]
+
+Do the following operations:
+\begin{enumerate}
+\item Crear las variables \variable{tiempo} and \variable{alcohol} e introducir estos datos.
+\item Compute el coeficiente de correlación lineal entre el alcohol and el tiempo e interpretarlo. ¿Es bueno el modelo
+lineal? 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Regression > Linear regression}.
+\item In the dialog displayed, select the variable \variable{alcohol} in the field \field{Variable
+dependiente} and la variable \variable{tiempo} in the field \field{Independent variable}, and click the button
+\button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Dibujar la regression line ofl alcohol sobre el tiempo. 
+¿Existe algún individuo con un residuo demasiado grande? 
+Si es así, eliminar dicho individuo de la muestra and volver a calcular el coeficiente de correlación. 
+¿Ha mejorado el modelo?
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Charts > Scatter plot}.
+\item In the dialog displayed, select the variable \variable{alcohol} in the field \field{Variable Y} y
+la variable \variable{tiempo} in the field \field{Variable X}.
+\item En la solapa \menu{Fitted line}, seleccionar \option{Lineal} and click the button \button{Submit}.
+\end{enumerate}
+Se observa que hay un residuo atípico para el punto que corresponde al los 210 minutos. 
+Para eliminarlo:
+En la ventana de edición del conjunto de datos hacer clic con el botón derecho del ratón sobre la fila correspondiente
+al dato con el residuo atípico and seleccionar \option{Borrar esta fila}.
+\end{indication}
+
+\item Si la concentración máxima de alcohol en la sangre que permite la ley para poder conducir es $0.3$ g/l, ¿cuánto
+tiempo habrá que esperar después de tomarse un litro de vino para poder conducir sin infringir la ley? 
+¿Es fiable esta predicción?
+\begin{indication}
+Para construir la recta de regresión:
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Regression > Linear regression}.
+\item In the dialog displayed, select the variable \variable{tiempo} in the field \field{Variable
+dependiente} and la variable \variable{alcohol} in the field \field{Independent variable}.
+\item Seleccionar \option{Guardar el modelo}, introducir un nombre para el modelo and click the button \button{Submit}.
+\end{enumerate}
+Para hacer la predicción:
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Regression > Predicciones}.
+\item In the dialog displayed seleccionar como modelo de regresión la recta calculada e introducir los
+valores para los que se desea la predicción in the field \field{Predicciones para} and click the button
+\button{Submit}.
+\end{enumerate}
+\end{indication}
+\end{enumerate}
+
+
+\item El conjunto de datos \variable{edad.estatura} del paquete \variable{rk.Teaching} contine la edad and la estatura
+de 30 personas. 
+Do the following operations:
+\begin{enumerate}
+\item Cargar datos del conjunto de datos \variable{edad.estatura} desde el paquete \variable{rk.Teaching}.
+
+\item Compute la regression line of la estatura sobre la edad. ¿Es un buen modelo la recta de regresión?
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Regression > Linear regression}.
+\item In the dialog displayed, select the variable \variable{estatura} in the field \field{Variable
+dependiente} and la variable \variable{edad} in the field \field{Independent variable}, and click the button
+\button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Dibujar el diagrama de dispersión de la estatura sobre la edad. 
+¿Alrededor de qué edad se observa un cambio en la tendencia? 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Charts > Scatter plot}.
+\item In the dialog displayed, select the variable \variable{estatura} in the field \field{Variable Y},
+la variable \variable{edad} in the field \field{Variable X}, and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Recodificar la variable edad en dos grupos para mayores and menores de 20 años.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching >  Datos > Recodificar variable}.
+\item In the dialog displayed seleccionar in the field \vampo{Variable a recodificar} la variable
+\variable{edad}.
+\item En el campo \field{Reglas de recodificación} introducir
+\begin{quote}
+\lstinline{lo:20 = "menores"}\\
+\lstinline{20:hi = "mayores"}
+\end{quote}
+\item En el cuadro \field{Guardar nueva variable} click the button \button{Cambiar}.
+\item In the dialog displayed seleccionar como objeto padre la el conjunto de datos \variable{edad\_estatura} and click the button \button{Aceptar}.
+\item Introducir el nombre de la nueva variable \variable{grupo.edad} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute la regression line of la estatura sobre la edad para cada grupo de edad. 
+¿En qué grupo explica mejor la recta de regresión la relación entre la estatura and la edad? 
+Justificar la respuesta.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Regression > Linear regression}.
+\item In the dialog displayed, select the variable \variable{estatura} in the field \field{Variable
+dependiente} and la variable \variable{edad} como \field{Independent variable}.
+\item Seleccionar la opición \option{Ajuste por grupos}, introducir la variable \variable{grupo.edad} in the field
+\field{Grouping variable(s)}, and hacer clic en el \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Dibujar las rectas de regresión anteriores.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Charts > Scatter plot}.
+\item In the dialog displayed, select the variable \variable{estatura} in the field \field{Variable Y} y
+la variable \variable{edad} in the field \field{Variable X}.
+\item Seleccionar la opción \option{Plot by groups} e introducir la variable \variable{grupo.edad} in the field
+\field{Grouping variable(s)}.
+\item En la solapa \menu{Fitted line}, seleccionar \option{Lineal} and click the button
+\button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item ¿Qué estatura se espera que tenga una persona de 14 años? ¿Y una de 38?
+\begin{indication}
+Para predecir la estatura de la persona de 14 años:
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Regression > Predicciones}.
+\item In the dialog displayed seleccionar como modelo de regresión la recta calculada para los menores e
+introducir 14 in the field \field{Predicciones para} and click the button
+\button{Submit}.
+\end{enumerate}
+para predecir la estatura de la persona de 38 años, repetir lo mismo pero seleccionando la recta de regresión para los
+mayores e introducidento 38 in the field \field{Predicciones para}.
+\end{indication}
+\end{enumerate}
+
+\opt{largo}{
+\item La siguiente tabla recoge la información de las calificaciones obtenidas por un grupo de alumnos en dos
+asignaturas $X$ e $Y$.
+\begin{center}
+\begin{tabular}{lcccccccccccc}
+Alumno & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12\\
+\hline
+$X$ & NT & AP & SS & SS & AP & AP & SS & NT & SB & SS & AP & AP\\
+$Y$ & SB & SS & AP & SS & AP & NT & SS & NT & NT & AP & AP & NT
+\end{tabular}
+\end{center}
+Do the following operations:
+\begin{enumerate}
+\item Create a data set con las variables \varaible{X} e \variable{Y} and enter the data.
+
+\item ¿Existe relación entre las calificaciones de $X$ e $Y$? Justificar la respuesta.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Regression > Correlación}.
+\item In the dialog displayed select the variables \variable{X} e \variable{Y} in the field
+\field{Variables}.
+\item En la solapa \menu{Opciones de correlación} seleccionar el método de \option{Ro de Spearman} and hacer clic sobre
+el botón \button{Submit}.
+\end{enumerate}
+\end{indication}
+\end{enumerate}
+}
+\end{enumerate}
+
+
+\section{Proposed exercises}
+\begin{enumerate}[leftmargin=*]
+\item  Se determina la pérdida de actividad que experimenta un medicamento desde el momento de su fabricación a lo
+largo del tiempo, obteniéndose el siguiente resultado:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline 
+Tiempo (en años) & 1 & 2 & 3 & 4 & 5 \\ 
+\hline 
+Actividad restante (\%) & 96 & 84 & 70 & 58 & 52 \\ 
+\hline
+\end{tabular}
+\end{center}
+Se desea calcular:
+\begin{enumerate}
+\item  La relación fundamental (recta de regresión) entre actividad restante and tiempo transcurrido.
+\item ¿En qué porcentaje disminuye la actividad cada año que pasa?
+\item ¿Cuándo tiempo debe pasar para que el fármaco tenga una actividad del 80\%? ¿Cuándo será nula la actividad?
+¿Son igualmente fiables estas predicciones?
+\end{enumerate}
+
+\item Al realizar un estudio sobre la dosificación de un cierto medicamento, se trataron 6 pacientes con dosis diarias
+de 2 mg, 7 pacientes con 3 mg and otros 7 pacientes con 4 mg. De los pacientes tratados con 2 mg, 2 curaron al cabo de 5
+días, and 4 al cabo de 6 días. De los pacientes tratados con 3 mg diarios, 2 curaron al cabo de 3 días, 4 al cabo de 5
+días and 1 al cabo de 6 días. Y de los pacientes tratados con 4 mg diarios, 5 curaron al cabo de 3 días and 2 al cabo de 4
+días. Do the following operations: 
+\begin{enumerate}
+\item Compute la regression line ofl tiempo de curación con respecto a la dosis suministrada.
+\item Compute el coeficiente de regresión del tiempo de curación con respecto a la dosis e interpretarlo.
+\item Compute el coeficiente de correlación lineal e interpretarlo.
+\item Determinar el tiempo esperado de curación para una dosis de 5 mg diarios. ¿Es fiable esta predicción?
+\item ¿Qué dosis debe aplicarse si queremos que el paciente tarde 4 días en curarse? ¿Es fiable la predicción?
+\end{enumerate}
+
+\item El fichero \variable{estaturas.pesos.alumnos} del paquete \variable{rk.Teaching}, contiene la estatura, el peso y
+el sexo de una muestra de alumnos universitarios.
+Do the following operations:
+\begin{enumerate}
+\item Cargar el conjunto de datos \variable{estaturas.pesos.alumnos} desde el paquete \variable{rk.Teaching}.
+\item Compute la regression line ofl peso sobre la estatura and dibujarla.
+\item Compute las rectas de regresión del peso sobre la estatura para cada sexo and dibujarlas.
+\item Compute los coeficientes de determinación de ambas rectas. ¿Qué recta es mejor modelo? Justificar la respuesta.
+\item ¿Qué peso tendrá un hombre que mida 170 cm? ¿Y una mujer de la misma estatura?
+\end{enumerate}
+
+\item El conjunto de datos \variable{neonatos} del paquete \variable{rk.Teaching}, contiene información sobre una
+muestra de 320 recién nacidos en un hospital durante un año que cumplieron el tiempo normal de gestación. 
+Do the following operations:
+\begin{enumerate}
+\item Construir la frequency table bidimensional del Agpar al minuto de nacer frente a si la madre ha fumado o no
+durante el embarazo. ¿Qué conclusiones se pueden sacar?
+\item Construir la frequency table bidimensional del peso de los recién nacidos frente a la edad de la madre. ¿Qué
+conclusiones se pueden sacar?
+\item Construir la regression line ofl peso de los recién nacidos sobre el número de cigarros fumados al día por las
+madres. ¿Existe una relación lineal fuerte entre el peso and el número de cigarros?
+\item Dibujar la recta de regresión calculada en el apartado anterior. ¿Por qué la recta no se ajusta bien a la nube de
+puntos?
+\item Compute and dibujar la regression line ofl peso de los recién nacidos sobre el número de cigarros fumados al día
+por las madres en el grupo de las madres que si fumaron durante el embarazo. ¿Es este modelo mejor o pero que la recta
+de los apartados anteriores? 
+
+Según este modelo, ¿cuánto disminuirá el peso del recién nacido por cada cigarro más diario
+que fume la madre? 
+\item Según el modelo anterior, ¿qué peso tendrá un recién nacido de una madre que ha fumado 5 cigarros diarios durante
+el embarazo? ¿Y si la madre ha fumado 30 cigarros diarios durante el embarazo? ¿Son fiables estas predicciones?
+\item ¿Existe la misma relación lineal entre el peso de los recién nacidos and el número de cigarros fumados al día por
+las madres que fumaron durante el embarazo en el grupo de las madres menores de 20 and en el grupo de las madres mayores de
+20? ¿Qué se puede concluir?
+\end{enumerate}
+\end{enumerate}

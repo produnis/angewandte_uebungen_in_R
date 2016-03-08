@@ -1,0 +1,241 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es)
+
+\chapter{Sampling statistics}\label{cha:statistics}
+
+\section{Solved exercises}
+\begin{enumerate}[leftmargin=*]
+\item The number of children in a sample of 25 families is
+\begin{center}
+1, 2, 4, 2, 2, 2, 3, 2, 1, 1, 0, 2, 2, 0, 2, 2, 1, 2, 2, 3, 1, 2, 2, 1, 2.
+\end{center}
+Do the following operations:
+\begin{enumerate}
+\item Create a data set with the variable \variable{children} and enter the data.
+\item Compute the arithmetic mean, variance and standard deviation of the number of children.
+Interpret the statistics.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching >  Descriptive statistics >  Statistics}.
+\item In the dialog displayed insert the variable \variable{children} in the field \field{Variable}.
+\item In the \mtab{Basic statistics} tab check the boxes of \option{Arithmetic mean}, \option{Variance} and
+\option{Standard deviation}, and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute the quartiles, the range, the interquartile range, the third decile and the 68th percentile. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching >  Descriptive statistics >  Statistics}.
+\item In the dialog displayed insert the variable \variable{children} in the field \field{Variable}.
+\item In the \mtab{Basic statistics} tab check the boxes of \option{Quartiles}, \option{Range}, \option{Interquartile
+range}, enter the values $0.3$ and $0.68$ in the field $\field{Percentiles}$, and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+\end{enumerate}
+
+\item The number of people treated in the emergency service of a hospital every day of November was
+\begin{center}
+15 \quad 23 \quad 12 \quad 10 \quad 28 \quad 7 \quad 12 \quad 17 \quad 20 \quad 21 \quad 18 \quad 13 \quad 11 \quad 12 \quad 26 \\
+30 \quad 6 \quad 16 \quad 19 \quad 22 \quad 14 \quad 17 \quad 21 \quad 28 \quad 9 \quad 16 \quad 13 \quad 11 \quad 16 \quad 20
+\end{center}
+Do the following operations: 
+\begin{enumerate}
+\item Create a data set with the variable \variable{emergencies} and enter the data.
+
+\item Compute the arithmetic mean, variance, standard deviation and coefficient of variation of the number of
+emergencies.
+Interpret the statistics. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching >  Descriptive statistics >  Statistics}.
+\item In the dialog displayed insert the variable \variable{emergencies} in the field \field{Variable}.
+\item In the \mtab{Basic statistics} tab check the boxes of \option{Arithmetic mean}, \option{Variance}, 
+\option{Standard deviation} and \option{Coefficient of variation}, and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute the coefficients of skewness and kurtosis and interpret the statistics.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching >  Descriptive statistics >  Statistics}.
+\item In the dialog displayed insert the variable \variable{emergencies} in the field \field{Variable}.
+\item In the \mtab{Basic statistics} tab check the boxes of \option{Coefficient of skewness} and \option{Coefficient
+of kurtosis} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+\end{enumerate}
+
+
+\item In a group of 20 students the grades in Mathematics were
+\begin{center}
+SS, AP, SS, AP, AP, NT, NT, AP, SB, SS \\
+SB, SS, AP, AP, NT, AP, SS, NT, SS, NT
+\end{center}
+
+Do the following operations:
+\begin{enumerate}
+\item  Create a data set \variable{course} with the variable \variable{grades} and enter the data.
+
+\item  Recode the grades into scores assigning $2.5$ to SS, $6$ to AP, $8$ to NT and $9.5$ to SB.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Data > Variable recoding}.
+\item In the dialog displayed insert the \variable{grades} in the field \field{Variable to recode}.
+\item Enter the following recoding rules in the field \field{Recoding rules}:
+\begin{quote}
+\lstinline{"SS" = 2.5}\\
+\lstinline{"AP" = 6}\\
+\lstinline{"NT" = 8}\\
+\lstinline{"SB" = 9.5}
+\end{quote}
+\item In the \field{Save new variable} click the button \button{Change}.
+\item In the dialog displayed select as parent object the data set \variable{course} and click
+the button \button{Accept}.
+\item Enter the name \variable{score} for the new variable, uncheck the box \option{Convert in a factor} and click the
+button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute the median and the interquartile range.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching >  Descriptive statistics >  Statistics}.
+\item In the dialog displayed select the variable \variable{score} in the field \field{Variable}.
+\item In the \mtab{Basic statistics} tab check the boxes of \option{Median} and \option{Interquartile range} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+\end{enumerate}
+
+\item The heights (in cm) of 30 students are 
+\begin{center}
+\begin{tabular}{ll}
+Females: & 173, 158, 174, 166, 162, 177, 165, 154, 166, 182, 169, 172, 170, 168. \\
+Males: & 179, 181, 172, 194, 185, 187, 198, 178, 188, 171, 175, 167, 186, 172, 176, 187.
+\end{tabular}
+\end{center}
+
+Do the following operations:
+\begin{enumerate}
+\item Create a data set with the variables \variable{height} and \variable{gender} and enter the data.
+
+\item Compute the arithmetic mean, median, variance, standard deviation and quartiles according to the gender.
+Interpret the statistics.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching >  Descriptive statistics >  Statistics}.
+\item In the dialog displayed insert the variable \variable{height} in the field \field{Variable},
+check the box \option{Statistics by groups} and insert the variable \variable{gender} in the field \field{Grouping
+variable(s)}.
+\item In the \mtab{Basic statistics} tab check the boxes of \option{Arithmetic mean}, \option{Median},
+\option{Variance}, \option{Standard deviation} and \option{Quartiles}, and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+\end{enumerate}
+
+\end{enumerate}
+
+
+\section{Proposed exercises}
+\begin{enumerate}[leftmargin=*]
+\item The number of injuries suffered by the members of a soccer team in a league were
+\begin{center}
+0, 1, 2, 1, 3, 0, 1, 0, 1, 2, 0, 1, 1, 1, 2, 0, 1, 3, 2, 1, 2, 1, 0, 1
+\end{center}
+
+Do the following operations:
+\begin{enumerate}
+\item Compute la arithmetic mean, median, variance and standard deviation of the number of injuries and interpret them.
+\item Compute the coefficients of skewness and kurtosis.
+\item Compute the fourth and the eighth deciles and interpret them.
+\end{enumerate}
+
+\item We want to compare the reliability of two blood pressure monitors, an arm monitor and a wrist monitor. 
+For that purpose we have performed 8 repeated measures of the blood pressure of the same person with both moniors.
+The measurements (in mmHg) were:
+\begin{center}
+\begin{tabular}{rl}
+Arm monitor: & 111, 109, 112, 111, 113, 113, 114, 111\\
+Wrist monitor: & 115, 113, 117, 116, 112, 112, 117, 112
+\end{tabular}
+\end{center}
+Which monitor is more reliable?
+
+\item The age and the marital status of a sample of 28 persons are:
+\begin{center}
+\begin{tabular}{|l|rrrrrrrrr|}
+\hline
+Marital status & \multicolumn{9}{c|}{Age}\\
+\hline
+Single    & 31 & 45 & 35 & 65 & 21 & 38 & 62 & 22 & 31 \\
+Married     & 72 & 39 & 62 & 59 & 25 & 44 & 54 &    &    \\
+Widow(er)      & 80 & 68 & 65 & 40 & 78 & 69 & 75 &    &    \\
+Divorced & 31 & 65 & 59 & 58 & 50 &    &    &    &    \\
+\hline
+\end{tabular}
+\end{center}
+
+Do the following operations:
+\begin{enumerate}
+\item Compute the arithmetic mean and the standard deviation of the age according to the marital status and interpret
+them.
+\item What group has the most representative mean?
+\end{enumerate}
+
+\item A study wants to determine if there are relations between the blood pressure and the tobacco and drink. 
+The values observed in a sample of 25 persons were:
+\begin{center}
+\begin{tabular}{lccccccccccccc}
+\hline
+Smokes  & yes & no & yes & yes & yes & no & no & yes & no & yes & no & yes & no \\
+Drinks & no & no & yes & yes & no & no & yes & yes & no & yes & no & yes & yes \\
+Blood pressure & 80 & 92 & 75 & 56 & 89 & 93 & 101 & 67 & 89 & 63 & 98 & 58 & 91 \\
+\hline
+\\
+\hline
+Smokes  & yes & no & no & yes & no & no & no & yes & no & yes & no & yes \\
+Drink & yes & no & yes & yes & no & no & yes & yes & yes & no & yes & no \\
+Blood pressure & 71 & 52 & 98 & 104 & 57 & 89 & 70 & 93 & 69 & 82 & 70 & 49 \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+\item Compute the arithmetic mean, the standard deviation and the coefficients of skewness and kurtosis of the blood
+pressure for smokers and non-smokers, and interpret them.
+\item Compute the same statistics for drinkers and non-drinkers. Interpret the statistics.
+\item Compute the same statistics for smokers and drinkers, smokers and non-drinkers, non-smokers and drinkers, and
+non-smoker and non-drinkers. Interpret the statistics
+\end{enumerate}
+
+
+% \item El conjunto de datos \variable{neonatos} del paquete \variable{rk.Teaching}, contiene información sobre una
+% muestra de 320 recién nacidos en un hospital durante un año que cumplieron el tiempo normal de gestación. 
+% Do the following operations:
+% \begin{enumerate}
+% \item Compute la media and la median muestral del peso de los nacidos e interpretarlos. 
+% \item Compute el peso medio de los recién nacidos de la muestra según si la madre ha fumado o no durante el embarazo.
+% Compute también el peso medio de los recién nacidos de madres que no han fumado durante el embarazo, según si la madre
+% fumaba o no antes del embarazo. ¿Qué conclusiones se pueden sacar?
+% \item ¿Cuál es la puntuación Apgar al minuto de nacer más frecuente?
+% \item Compute la media de la diferencia entre las puntuaciones Apgar a los 5 minutos and al minuto de nacer. ¿Cómo
+% evolucionan los recién nacidos?
+% \item Compute los quartiles muestrales del peso de los recién nacidos e interpretarlos.
+% \item Comparar los quartiles muestrales del peso de los recién nacidos según el gender. 
+% \item ¿Por encima de qué peso estarán el 10\% de los niños con mayor peso?
+% \item Si se considera que un niño es atípico por bajo peso si se encuentra entre el 5\% de los pesos más bajos, ¿por
+% debajo de qué peso tiene que estar?
+% \item Compute el recorrido and el range intercuartílico muestrales del peso de los recién nacidos e interpretarlos.
+% \item Compute la variance and la standard deviation del peso de los recién nacidos e interpretarlos.
+% \item ¿En qué grupo hay más variabilidad del peso de los recién nacidos, en las madres fumadoras o en las madres no
+% fumadoras durante el embarazo? ¿En qué grupo será más representativo el peso medio?
+% \item ¿Qué variable presenta más variabilidad relativa, el peso de los recién nacidos o el Apgar al minuto de nacer?
+% \item Compute el coefficient of skewness and de apuntamiento muestrales del peso de los recién nacidos e interpretarlos.
+% \item ¿Qué distribución es más asimétrica, la de los pesos de recién nacidos en madres mayores de 20 años o en madres
+% menores de 20 años?
+% \item ¿Qué distribución es más apuntada, la del peso de los recién nacidos en hombres o en mujeres?
+% \item De acuerdo a la forma de la distribución, ¿puede considerarse la puntuación Apgar al minuto de nacer como una
+% variable normal? ¿Y el número de cigarros fumados al día durante el embarazo?
+% \end{enumerate}
+\end{enumerate}
+
+\end{enumerate}
