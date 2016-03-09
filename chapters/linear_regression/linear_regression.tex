@@ -35,7 +35,7 @@ According to the point cloud, what type of regression model explains better the 
 \begin{enumerate}
 \item Select the menu \menu{Teaching > Regression > Linear regression}.
 \item In the dialog displayed, insert the variable \variable{Y} in the field \field{Dependent variable} and the variable
-\variable{X} in the field \field{Independent variable}, and click the button \button{Submit}.
+\variable{X} in the field \field{Independent variable(s)}, and click the button \button{Submit}.
 \end{enumerate}
 \end{indication}
 
@@ -53,7 +53,7 @@ variable \variable{X} in the field \field{X variable}.
 \item Compute la regression line of $X$ on $Y$ and plot it on the scatter plot.
 \begin{indication}
 Repeat the steps of the previous part but inserting the variable \variable{X} in the field \field{Dependent variable}
-and the variable \variable{Y} in the field \field{Independent variable}. 
+and the variable \variable{Y} in the field \field{Independent variable(s)}. 
 \end{indication}
 
 \item How are the residuals?
@@ -85,35 +85,36 @@ The values of these variables in a sample of 30 students were:
 
 Do the following operations:
 \begin{enumerate}
-\item  Create a data set with the variables \variable{Study.hours} and \variable{Failed.subjects} and enter the data of
+\item  Create a data set with the variables \variable{study.hours} and \variable{failed.subjects} and enter the data of
 the sample.
 
-\item Construct the two-dimensional frequency table of the variables \variable{Study.hours} and
-\variable{Failed.subjects}.
+\item Construct the two-dimensional frequency table of the variables \variable{study.hours} and
+\variable{failed.subjects}.
 \begin{indication}
 \begin{enumerate}
 \item Select the menu \menu{Teaching > Frequency distribution > Two-dimensional frequency table}.
-\item In the dialog displayed insert the variable \variable{Study.hours} in the field \field{Variable
-tabulate in rows}, the variable \variable{Failed.subjects} in the field \field{Variable to tabulate in columns}, and
+\item In the dialog displayed insert the variable \variable{study.hours} in the field \field{Variable to 
+tabulate in rows} and the variable \variable{failed.subjects} in the field \field{Variable to tabulate in columns}.
+\item In the \mtab{Row classes} tab, check the box \field{Grouping intervals for the row variable}, and
 click the button \button{Submit}. 
 \end{enumerate}
 \end{indication}
 
-\item Compute la regression line of \variable{Failed.subjects} on  \variable{Study.hours} and plot it.
+\item Compute la regression line of \variable{failed.subjects} on  \variable{study.hours} and plot it.
 \begin{indication}
 To compute the regression line:
 \begin{enumerate}
 \item Select the menu \menu{Teaching > Regression > Linear regression}.
-\item In the dialog displayed insert the variable \variable{Failed.subjects} in the field \field{Dependent variable} and
-the variable \variable{Study.hours} in the field \field{Independent variable}, check the box \option{Save the model},
+\item In the dialog displayed insert the variable \variable{failed.subjects} in the field \field{Dependent variable} and
+the variable \variable{study.hours} in the field \field{Independent variable(s)}, check the box \option{Save the model},
 enter the name \variable{linear.model.failed.subjects.on.study.hours} for the regression model and click the button
 \button{Submit}.
 \end{enumerate}
 To plot he regression line:
 \begin{enumerate}
 \item Select the menu \menu{Teaching > Charts > Scatter plot}.
-\item In the dialog displayed insert the variable \variable{Failed.subjects} in the field \field{Y variable} and the
-variable \variable{Study.hours} in the field \field{X variable}.
+\item In the dialog displayed insert the variable \variable{failed.subjects} in the field \field{Y variable} and the
+variable \variable{study.hours} in the field \field{X variable}.
 \item In the \mtab{Fitted line} tab, check the box \option{Linear} and click the button \button{Submit}.
 \end{enumerate}
 \end{indication}
@@ -151,8 +152,8 @@ Is this prediction reliable?
 To compute the regression line:
 \begin{enumerate}
 \item Select the menu \menu{Teaching > Regression > Linear regression}.
-\item In the dialog displayed insert the variable \variable{Study.hours} in the field \field{Dependent variable} and
-the variable \variable{Failed.subjects} in the field \field{Independent variable}, check the box \option{Save the
+\item In the dialog displayed insert the variable \variable{study.hours} in the field \field{Dependent variable} and
+the variable \variable{failed.subjects} in the field \field{Independent variable(s)}, check the box \option{Save the
 model}, enter the name \variable{linear.model.study.hours.on.failed.subjects} for the regression model
 and click the button \button{Submit}.
 \end{enumerate}
@@ -188,7 +189,7 @@ Is the linear model a good model to explain the metabolization of alcohol?
 \begin{enumerate}
 \item Select the menu \menu{Teaching > Regression > Linear regression}.
 \item In the dialog displayed insert the variable \variable{alcohol} in the field \field{Dependent variable}, the
-variable \variable{time} in the field \field{Independent variable}, and click the button \button{Submit}.
+variable \variable{time} in the field \field{Independent variable(s)}, and click the button \button{Submit}.
 \end{enumerate}
 \end{indication}
 
@@ -216,7 +217,7 @@ To compute the regression line:
 \begin{enumerate}
 \item Select the menu \menu{Teaching > Regression > Linear regression}.
 \item In the dialog displayed insert the variable \variable{time} in the field \field{Dependent variable} and the
-variable \variable{alcohol} in the field \field{Independent variable}.
+variable \variable{alcohol} in the field \field{Independent variable(s)}.
 \item Check the box \option{Save the model}, enter the name \variable{linear.model.time.on.alcohol} for the linear model
 and click the button \button{Submit}.
 \end{enumerate}
@@ -242,7 +243,7 @@ Is the linear model a good model to explain the relation between the height and 
 \begin{enumerate}
 \item Select the menu \menu{Teaching > Regression > Linear regression}.
 \item In the dialog displayed insert the variable \variable{height} in the field \field{Dependent variable}, the
-variable \variable{age} in the field \field{Independent variable}, and click the button \button{Submit}.
+variable \variable{age} in the field \field{Independent variable(s)}, and click the button \button{Submit}.
 \end{enumerate}
 \end{indication}
 
@@ -281,7 +282,7 @@ Justify the answer.
 \begin{enumerate}
 \item Select the menu \menu{Teaching > Regression > Linear regression}.
 \item In the dialog displayed insert the variable \variable{height} in the field \field{Dependent variable} and la
-variable \variable{age} in the field \field{Independent variable}.
+variable \variable{age} in the field \field{Independent variable(s)}.
 \item Check the box \option{Regression by groups} and insert the variable \variable{age.group} in the field
 \field{Grouping variable(s)}.
 \item Check the box \option{Save the model}, enter the name \variable{linear.model.height.on.age} for the linear
