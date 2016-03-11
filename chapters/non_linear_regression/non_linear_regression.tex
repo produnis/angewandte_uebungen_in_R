@@ -3,243 +3,234 @@
 \chapter{Non-linear regression}\label{cha:non-linear-regression}
 
 \section{Solved exercises}
-El procedimiento más sencillo para construir un modelo no lineal, siempre que sea posible, es transformar las variables
-para convertirlo en un modelo lineal. En el caso de los modelos de regresión simple más comunes las transformaciones que
-convierten cada modelo en un modelo lineal aparecen en la tabla siguiente:
-\begin{center}
-\begin{tabular}{|l|c|c|p{5cm}|}
-\hline
- Modelo      &     Modelo no lineal     & Modelo lineal & Transformación  \\
-\hline
- Potencial               &       $y=ax^b$       & $\log(y) = \log(a)+b\log(x)$ & Se toma el logaritmo de ambas
- variables\\
-\hline
- Exponencial             &     $y=e^{a+bx}$     & $\log(y) = a+bx$ & Se toma el logaritmo de la variable dependiente\\
-\hline
- Logarítmico             &       $y=a+b\log x$  &  $y=a+b\log x$ & Se toma el logaritmo de la variable independiente   
- \\
-\hline
-Inverso & $y=a+b/x$ & $y=a+b\frac{1}{x}$ & Se toma el inverso de la variable independiente \\
-\hline
-Curva S & $y= e^{a+b/x}$ & $\log(y)=a+b\frac{1}{x}$ & Se toma el logaritmo de la variable dependiente y el inverso de
-la independiente\\
-\hline
-\end{tabular}
-\end{center}
-
 \begin{enumerate}[leftmargin=*]
-\item En un experimento se ha medido el número de bacterias por unidad de volumen en un cultivo, cada hora transcurrida,
-obteniendo los siguientes resultados:
+\item The number of bacteria in a culture evolves with time according to the table below.
+
 \begin{center}
 \begin{tabular}{lrrrrrrrrr}
 \hline
-Horas & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8  \\
-Nº Bacterias & 25 & 28 & 47 & 65 & 86 & 121 & 190 & 290 & 362\\
+Time(hours) & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8  \\
+Bacteria & 25 & 28 & 47 & 65 & 86 & 121 & 190 & 290 & 362\\
 \hline
 \end{tabular}
 \end{center}
 
-Se pide:
+Do the following operations:
 \begin{enumerate}
-\item Crear un conjunto de datos con las variables \variable{horas} y \variable{bacterias} e introducir estos datos.
+\item Create a data set with the variables \variable{time} and \variable{bacteria} and enter the data of the sample.
 
-\item Dibujar el diagrama de dispersión correspondiente. En vista del diagrama, ¿qué tipo de modelo crees que explicará
-mejor la relación entre el número de bacterias y el tiempo transcurrido? 
-\begin{indicacion}
+\item Plot the scatter plot. 
+According to the point cloud, what type of model explains better the bacteria evolution?
+\begin{indication}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Gráficos > Diagrama de dispersión}.
-\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{bacterias} en el campo \campo{Variable Y}
-y la variable \variable{horas} en el campo \campo{Variable X}, y hacer clic en el botón \boton{Enviar}.
+\item Select the menu \menu{Teaching > Charts > Scatter plot}.
+\item In the dialog displayed insert the variable \variable{bacteria} in the field \field{Y variable}
+and the variable \variable{time} in the field \field{X variable}, and click the button \button{Submit}.
 \end{enumerate}
-\end{indicacion}
+\end{indication}
 
-\item Calcular los modelos exponencial y cuadrático de las bacterias sobre las horas. ¿Qué tipo de modelo es el mejor?
-\begin{indicacion}
-Para el modelo exponencial:
-\begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Regresión > Regresión no lineal}.
-\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{bacterias} en el campo \campo{Variable
-dependiente} y la variable \variable{horas} en el campo \campo{Variable independiente}.
-\item En la solapa de \opcion{Modelo de regresión} seleccionar el modelo \opcion{Exponencial}.
-\item Seleccionar \opcion{Guardar modelo} e introducir un nombre para el modelo y hacer clic sobre el botón \boton{Enviar}.
-\end{enumerate}
-Para el modelo cuadrático repetir los pasos pero seleccionando como modelo el \opcion{Cuadrático}. 
-El modelo mejor será aquel que tenga un coeficiente de determinación mayor.
-\end{indicacion}
+\item Compute the quadratic and exponential models of bacteria on time.
 
-\item Dibujar la curva del mejor de los modelos anteriores.
-\begin{indicacion}
+\begin{indication}
+To compute the quadratic model:
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Gráficos > Diagrama de dispersión}.
-\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{bacterias} en el campo \campo{Variable Y}
-y la variable \variable{horas} en el campo \campo{Variable X}.
-\item En la solapa \menu{Línea de ajuste} seleccionar la opción \opcion{Exponencial} y hacer clic sobre el botón \boton{Enviar}.
+\item Select the menu \menu{Teaching > Regression > Non-linear regression}.
+\item In the dialog displayed insert the variable \variable{bacteria} in the field \field{Dependent variable} and the
+variable \variable{time} in the field \field{Independent variable}.
+\item In the \option{Regression models} tab check the box \option{Quadratic}.
+\item Check the box \option{Save model}, enter the name \variable{quadratic.model.bacteria.on.time} and click the
+button \button{Submit}.
 \end{enumerate}
-\end{indicacion}
+To compute the exponential model:
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Regression > Non-linear regression}.
+\item In the dialog displayed insert the variable \variable{bacteria} in the field \field{Dependent variable} and the
+variable \variable{time} in the field \field{Independent variable}.
+\item In the \option{Regression models} tab check the box \option{Exponential}.
+\item Check the box \option{Save model}, enter the name \variable{exponential.model.bacteria.on.time} and click the
+button \button{Submit}.
+\end{enumerate}
+The best model is the one with a highest coefficient of determination.
+\end{indication}
 
-\item Según el modelo anterior, ¿cuántas bacterias habrá al cabo de 3 horas y media del inicio del cultivo? 
-¿Y al cabo de 10 horas? 
-¿Son fiables estas predicciones?
-\begin{indicacion}
+\item Plot the graph of the best model of the previous part.
+\begin{indication}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Regresión > Predicciones}.
-\item En el cuadro de diálogo que aparece seleccionar el modelo de regresión exponencial construido antes.
-\item Introducir los valores $3.5, 10$ en el campo \campo{Predicciones para} y hacer clic sobre el botón \boton{Enviar}.
-\item Como se trata de un modelo exponencial, las predicciones obtenidas corresponden al logaritmo de bacterias. 
-Para obtener la predicción de bacterias basta con aplicar la función exponencial a los valores obtenidos.
+\item Select the menu \menu{Teaching > Charts > Scatter plot}.
+\item In the dialog displayed insert the variable \variable{bacteria} in the field \field{Y variable}
+and the variable \variable{time} in the field \field{X variable}.
+\item In the \mtab{Fitted line} tab check the box \option{Exponencial} and click the button \button{Submit}.
 \end{enumerate}
-\end{indicacion}
+\end{indication}
 
-\item Dar una predicción lo más fiable posible del tiempo que tendría que transcurrir para que en el cultivo hubiese 100
-bacterias.
-\begin{indicacion}
-Para construir el modelo logarítmico:
+\item According to the best model, how many bacteria there will be after 3 hours of the beginning of the culture?
+And after 10 hours?
+Are these predictions reliable?
+\begin{indication}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Regresión > Regresión no lineal}.
-\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{horas} en el campo \campo{Variable
-dependiente} y la variable \variable{bacterias} en el campo \campo{Variable independiente}.
-\item Seleccionar como modelo el \opcion{Logarítmico}.
-\item Seleccionar \opcion{Guardar modelo} e introducir un nombre para el modelo y hacer clic sobre el botón \boton{Enviar}.
+\item Select the menu \menu{Teaching > Regression > Predictions}.
+\item In the dialog displayed insert the model \variable{exponential.model.bacteria.on.time} in the field
+\field{Regression model}.
+\item Enter the values $3.5, 10$ in the field \field{Predictions for} and click the button \button{Submit}.
+\item As it is an exponential model, the predictions are for the logarithm of bacteria. 
+To get the prediction of bacteria you must apply the exponential function to the values obtained.
 \end{enumerate}
-Para hacer la predicción:
-\begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Regresión > Predicciones}.
-\item En el cuadro de diálogo que aparece seleccionar el modelo de regresión logarítmico construido antes.
-\item Introducir el valor $100$ en el campo \campo{Predicciones para} y hacer clic sobre el botón \boton{Enviar}.
-\end{enumerate}
-\end{indicacion}
-\end{enumerate}
+\end{indication}
 
-\item El conjunto de datos \variable{dieta} del paquete \variable{rk.Teaching} contiene los datos de un estudio llevado
-a cabo por un centro dietético para probar una nueva dieta de adelgazamiento.
-Para cada individuo se ha medido el número de días que lleva con la dieta, el número de kilos perdidos desde entonces y
-si realizó o no un programa de ejercicios.
-Se pide:
+\item Give a prediction as reliable as possible of the time required to have 100 bacteria in the culture.
+\begin{indication}
+To compute the logarithmic model:
 \begin{enumerate}
-\item Cargar el conjunto de datos \variable{dieta} desde el paquete \variable{rk.Teaching}.
-
-\item Dibujar el diagrama de dispersión. 
-Según la nube de puntos, ¿qué tipo de modelo explicaría mejor la relación entre los kilos perdidos y los días de dieta?
-\begin{indicacion}
+\item Select the menu \menu{Teaching > Regression > Non-linear regression}.
+\item In the dialog displayed insert the variable \variable{time} in the field \field{Dependent variable} and the
+variable \variable{bacteria} in the field \field{Independent variable}.
+\item In the \option{Regression models} tab check the box \option{Logarithmic}.
+\item Check the box \option{Save model}, enter the name \variable{logarithmic.model.time.on.bacteria} and click
+the button \button{Submit}.
+\end{enumerate}
+To make the prediction:
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Gráficos > Diagrama de dispersión}.
-\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \campo{Variable Y}, la
-variable \variable{dias} en el campo \campo{Variable X}, y hacer clic en el botón \boton{Enviar}.
+\item Select the menu \menu{Teaching > Regression > Predictions}.
+\item In the dialog displayed insert the model \variable{logarithmic.model.time.on.bacteria} in the field
+\field{Regression model}.
+\item Enter the value $100$ in the field \field{Predictions for} and click the button \button{Submit}.
 \end{enumerate}
-\end{indicacion}
-
-\item Construir el modelo de regresión que mejor explique la relación entre los kilos perdidos y los días de dieta.
-\begin{indicacion}
-\begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Regresión > Comparación de modelos}.
-\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \campo{Variable
-dependiente} y la variable \variable{dias} en el campo \campo{Variable independiente}.
-\item En la solapa \menu{Modelos de regresión} seleccionar todos los modelos y hacer clic sobre el botón \boton{Enviar}.
-\item El mejor modelo aparece en primer lugar y es el que tenga el coeficiente de determinación mayor.
-\end{enumerate}
-\end{indicacion}
-
-\item Dibujar el modelo del apartado anterior.
-\begin{indicacion}
-\begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Gráficos > Diagrama de Dispersión}.
-\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \campo{Variable Y}
-y la variable \variable{dias} en el campo \campo{Variable X}.
-\item En la solapa \menu{Línea de ajuste} seleccionar la opción correspondiente al mejor modelo y hacer
-clic sobre el botón \boton{Enviar}.
-\end{enumerate}
-\end{indicacion}
-
-\item Construir el modelo de regresión que mejor explique la relación entre los kilos perdidos y los días de dieta para
-los que no hacen ejercicio.
-\begin{indicacion}
-Para ver qué modelo es mejor:
-\begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Regresión > Comparación de modelos}.
-\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \campo{Variable
-dependiente} y la variable \variable{dias} en el campo \campo{Variable independiente}.
-\item Seleccionar la opción \opcion{Filtro} e introducir la condición \lstinline{ejercicio=="no"} en el campo \campo{Condición de selección}.
-\item En la solapa \menu{Modelos de regresión} seleccionar todos los modelos y hacer clic sobre el botón \boton{Enviar}.
-\item El mejor modelo aparece en primer lugar y es el que tenga el coeficiente de determinación mayor.
-\end{enumerate}
-Para construir el modelo:
-\begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Regresión > Regresión no lineal}.
-\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \campo{Variable
-dependiente} y la variable \variable{dias} en el campo \campo{Variable independiente}.
-\item Seleccionar la opción \opcion{Filtro} e introducir la condición \lstinline{ejercicio=="no"} en el campo \campo{Condición de selección}.
-\item Seleccionar \opcion{Guardar modelo} e introducir un nombre para el modelo y hacer clic sobre el botón \boton{Enviar}.
-\end{enumerate}
-\end{indicacion}
-
-\item Construir el modelo de regresión que mejor explique la relación entre los kilos perdidos y los días de dieta para
-los que si hacen ejercicio.
-\begin{indicacion}
-Para ver qué modelo es mejor:
-\begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Regresión > Comparación de modelos}.
-\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \campo{Variable
-dependiente} y la variable \variable{dias} en el campo \campo{Variable independiente}.
-\item Seleccionar la opción \opcion{Filtro} e introducir la condición \lstinline{ejercicio=="si"} en el campo \campo{Condición de selección}.
-\item En la solapa \menu{Modelos de regresión} seleccionar todos los modelos y hacer clic sobre el botón \boton{Enviar}.
-\item El mejor modelo aparece en primer lugar y es el que tenga el coeficiente de determinación mayor.
-\end{enumerate}
-Para construir el modelo:
-\begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Regresión > Regresión no lineal}.
-\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \campo{Variable
-dependiente} y la variable \variable{dias} en el campo \campo{Variable independiente}.
-\item Seleccionar la opción \opcion{Filtro} e introducir la condición \lstinline{ejercicio=="si"} en el campo \campo{Condición de selección}.
-\item Seleccionar \opcion{Guardar modelo} e introducir un nombre para el modelo y hacer clic sobre el botón \boton{Enviar}.
-\end{enumerate}
-\end{indicacion}
-
-\opt{largo}{
-\item Utilizar el modelo construido para predecir el número de kilos perdidos tras 40 y 500 días de dieta, tanto para
-los que hacen ejercicio como para los que no. ¿Son fiables estas predicciones?
-\begin{indicacion}
-\begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Regresión > Predicciones}.
-\item En el cuadro de diálogo que aparece seleccionar el modelo de regresión construido antes para los que no hacen ejercicio.
-\item Introducir los valores $40, 500$ en el campo \campo{Predicciones para} y hacer clic sobre el botón \boton{Enviar}.
-\end{enumerate}
-Repetir los pasos anteriores seleccionando el modelo de regresión construido antes para los que si hacen ejercicio.}
-\end{indicacion}
-\end{enumerate}
-
+\end{indication}
 \end{enumerate}
 
 
-\section{Ejercicios propuestos}
+\item The data set \variable{diet} of the package \variable{rk.Teaching} contains data of a study about a diet.
+For every individual it has been measured the number of days of diet, the weight loss and whether he or she does
+physical exercise regularly.
+
+Do the following operations:
+\begin{enumerate}
+\item Load the data set \variable{diet} from the package \variable{rk.Teaching}.
+
+\item Plot the scatter plot.
+According to the point cloud, what type of model explains better the weight loss on the days of diet?
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Charts > Scatter plot}.
+\item In the dialog displayed, select the variable \variable{weight.loss} in the field \field{Variable Y}, la
+variable \variable{days} in the field \field{Variable X}, and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute the regression model that explains better the relation between the weight loss and the days of diet. 
+Is it a good model for making predictions?
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Regression > Model comparison}.
+\item In the dialog displayed insert the variable \variable{weight.loss} in the field \field{Dependent variable} and the
+variable \variable{days} in the field \field{Independent variable}.
+\item In the \mtab{Regression models} tab check the boxes of the models to compare and click the button \button{Submit}.
+\item The best model is the one with the greatest coefficient of determination.
+\end{enumerate}
+\end{indication}
+
+\item Plot the graph of the previous model. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Charts > Scatter plot}.
+\item In the dialog displayed insert the variable \variable{weight.loss} in the field \field{Y variable}
+and the variable \variable{days} in the field \field{X variable}.
+\item In the tab \mtab{Fitted line} check the box of the corresponding model and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute the regression model that best explains the relation between the weight loss and the days of diet for the
+group of people who don't do physical exercise regularly.
+\begin{indication}
+To see what is the best regression model:
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Regression > Model comparison}.
+\item In the dialog displayed insert the variable \variable{weight.loss} in the field \field{Dependent variable} and the
+variable \variable{days} in the field \field{Independent variable}.
+\item Check the box \option{Filter} and enter the condition \lstinline{exercise=="no"} in the field \field{Selection
+condition}.
+\item In the \mtab{Regression models} tab check all the boxes and click the button \button{Submit}.
+\item The best model is the one with the greatest coefficient of determination.
+\end{enumerate}
+To compute the regression model:
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Regression > Non-linear regression}.
+\item In the dialog displayed insert the variable \variable{weight.loss} in the field \field{Dependent variable} and the
+variable \variable{days} in the field \field{Independent variable}.
+\item Check the box \option{Filter} and enter the condition \lstinline{exercise=="no"} in the field
+\field{Selection condition}.
+\item Check the box \option{Save model}, enter the name \variable{regression.weight.loss.on.days.no.exercise} and click
+the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute the regression model that best explains the relation between the weight loss and the days of diet for the
+group of people who do physical exercise regularly.
+\begin{indication}
+To see what is the best regression mode:
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Regression > Model comparison}.
+\item In the dialog displayed insert the variable \variable{weight.loss} in the field \field{Dependent variable} and the
+variable \variable{days} in the field \field{Independent variable}.
+\item Check the box \option{Filter} and enter the condition \lstinline{exercise=="yes"} in the field \field{Selection
+condition}.
+\item In the \mtab{Regression models} tab check all the boxes and click the button \button{Submit}.
+\item The best model is the one with the greatest coefficient of determination.
+\end{enumerate}
+To compute the regression model:
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Regression > Non-linear regression}.
+\item In the dialog displayed insert the variable \variable{weight.loss} in the field \field{Dependent variable} and the
+variable \variable{days} in the field \field{Independent variable}.
+\item Check the box \option{Filter} and enter the condition \lstinline{exercise=="yes"} in the field
+\field{Selection condition}.
+\item Check the box \option{Save model}, enter the name \variable{regression.weight.loss.on.days.exercise} and click
+the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Use the previous regression models to predict the weight loss after 40 and 300 days of diet for people who
+do physical exercise regularly and for people who don't.
+Are the predictions reliable?
+\begin{indication}
+Predictions for people who do exercise:
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Regression > Predictions}.
+\item In the dialog displayed insert the model \variable{regression.weight.loss.on.days.exercise} in the field
+\field{Regression model}.
+\item Enter the values $40, 500$ in the field \field{Predictions for} and click the button \button{Submit}.
+\end{enumerate}
+Predictions for people who don't do exercise:
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Regression > Predictions}.
+\item In the dialog displayed insert the model \variable{regression.weight.loss.on.days.no.exercise} in the field
+\field{Regression model}.
+\item Enter the values $40, 500$ in the field \field{Predictions for} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+\end{enumerate}
+
+\end{enumerate}
+
+
+\section{Proposed exercises}
 \begin{enumerate}[leftmargin=*]
-\item La concentración de un fármaco en sangre, $C$ en mg/dl, es función del tiempo, $t$ en horas, y viene dada por la
-siguiente tabla: 
+\item The concentration of a drug in blood, in en mg/dl, depends on time according to the data below. 
 \[
 \begin{array}{|l|r|r|r|r|r|r|r|}
 \hline
-\text{t} & 2 & 3 & 4 & 5 & 6 & 7 & 8\\
+\mbox{Time (hours)} & 2 & 3 & 4 & 5 & 6 & 7 & 8\\
 \hline
-\text{C} & 25 & 36 & 48 & 64 & 86 & 114 & 168\\
+\mbox{Concentration} & 25 & 36 & 48 & 64 & 86 & 114 & 168\\
 \hline
 \end{array}
 \]
-Se pide: 
+Do the following operations: 
 \begin{enumerate}
-\item Según el modelo exponencial, ¿qué concentración de fármaco habría a las $4.8$ horas? ¿Es fiable la predicción?
-Justificar adecuadamente la respuesta.
-\item Según el modelo logarítmico, ¿qué tiempo debe pasar para que la concentración sea de 100 mg/dl?
-\end{enumerate}
-
-\item El fichero \texttt{naciones.txt} contiene información sobre el desarrollo de distintos países (tasa de fertilidad, tasa de uso de
-anticonceptivos, tasa de mortalidad infantil, producto interior bruto per cápita y continente). 
-Se pide:
-\begin{enumerate}
-\item Importar el fichero \texttt{naciones.txt} en un conjunto de datos.
-\item Construir el mejor modelo de regresión de la tasa de fertilidad sobre el producto interior bruto. ¿Cómo
-explicarías esta relación?
-\item Dibujar el modelo del apartado anterior.
-\item ¿Qué tasa de fertilidad le corresponde a una mujer que viva en un país con un producto interior bruto per cápita
-de 10000 \$? ¿Y si la mujer vive en Europa?
+\item According to the exponential modelSegún el modelo exponential, what will be the concentration of the drug in blood
+after hours?
+Is this prediction reliable?
+\item According to the logarithmic model, how much time must pass to have a concentration of 100 mg/dl of drug in blood?
 \end{enumerate}
 
 \end{enumerate}
