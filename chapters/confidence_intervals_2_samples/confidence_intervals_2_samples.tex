@@ -1,0 +1,214 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es)
+
+\chapter{Confidence intervals for comparing two populations}\label{cha:confidence-intervals-2}
+
+\section{Solved exercises}
+\begin{enumerate}[leftmargin=*] 
+\item  In order to see whether an advertising campaign has increased the sales of a drug, a sample of 8 pharmacies were
+drawn from a city.
+In each pharmacy the monthly sales of the drug before and after the campaign was recorded in the following table.
+\begin{center}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Before & 147 & 163 & 121 & 205 & 132 & 190 & 176 & 147 \\
+After & 150 & 171 & 132 & 208 & 141 & 184 & 182 & 145\\ 
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+\item Create a data set with the variables \variable{before} and \variable{after} and enter the data.
+
+\item Compute the mean of monthly sales, before and after the campaign. 
+Are the meas different?
+Have the campaign increased the sales of the drug?
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Descriptive statistics > Statistics}.
+\item In the dialog displayed insert the variables \variable{before} and \variable{after} in the field
+\field{Variables}.
+\item In the \mtab{Basic statistics} tab check the box \option{Mean} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute the confidence intervals for the mean of the difference between the monthly sales after and before with
+confidence levels $0.05$ and $0.01$.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Parametric tests > Means > t-test for comparing two means (paired)}.
+\item In the dialog displayed insert the variable \variable{before} in the field \field{Compare mean of population} and
+the variable \variable{after} in the field \field{With mean of population}.
+\item In the \mtab{Test options} enter $0.95$ in the field \field{Confidence level} and click the button
+\button{Submit}.
+\item Repeat the previous steps but entering $0.99$ in the field \field{Confidence level}.
+\end{enumerate}
+\end{indication}
+
+\item Can we affirm that the advertising campaign has increased the drug sales significantly? 
+Can we conclude the same if we change the sales after the campaign of the two last pharmacies putting 190 instead of 182
+and 165 instead of 145?
+What happens to the confidence intervals?
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Parametric tests > Means > t-test for comparing two means (paired)}.
+\item In the dialog displayed insert the variable \variable{before} in the field \field{Compare} and the variable
+\variable{after} in the field \field{With}.
+\item In the \mtab{Test options} enter $0.95$ in the field \field{Confidence level} and click the button
+\button{Submit}.
+\end{enumerate}
+We can conclude that there are significant differences between the means, with the confidence level set, if the
+confidence interval doesn't contain zero. 
+\end{indication}
+\end{enumerate}
+
+
+\item A diary company receive milk from two farms $X$ and $Y$.
+To analyze the quality of milk, the milk fat have been measure for two samples of milk, one from each farm.
+The results are in the table below. 
+\[
+\begin{array}{ll|ll}
+\multicolumn{2}{c|}{X} & \multicolumn{2}{c}{Y} \\
+\hline
+0.34 & 0.34 & 0.28 & 0.29 \\
+0.32 & 0.35 & 0.30 & 0.32 \\
+0.33 & 0.33 & 0.32 & 0.31 \\
+0.32 & 0.32 & 0.29 & 0.29 \\
+0.33 & 0.30 & 0.31 & 0.32 \\
+0.31 & 0.32 & 0.29 & 0.31 \\
+ &  & 0.33 & 0.32 \\
+ &  & 0.32 & 0.33 \\
+\end{array}
+\]
+
+\begin{enumerate}
+\item Create a data set with the variables \variable{fat} and \variable{farm} and enter the data of the sample.
+\item Compute the confidence interval for the difference between the milk fat means of farms $X$ and $Y$.  
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Parametric tests > Means > t-test for comparing two means (independent)}.
+\item In the dialog displayed insert the \variable{fat} in the field \field{Compare mean of} and the variable
+\variable{farm} in the field \field{According to}.
+\item In the frame \field{Populations to compare} insert the value \variable{X} in the field \field{Compare} and the
+value \variable{Y} in the field \field{With}.
+\item In the \mtab{Test options} enter $0.95$ in the field \field{Confidence level} and click the button
+\button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Can we conclude that the difference between the milk fat means of the farms is significant? 
+Which farm has milk with more fat?
+How much more fat has the milk of $X$ farm than the milk of $Y$ farm? 
+\begin{indication}
+We can conclude that there are significant differences between the means, with the confidence level set, if the
+confidence interval doesn't contain zero. 
+\end{indication}
+\end{enumerate}
+
+
+\item In a survey performed by a university about the use of the library, a random sample of 34 students has been asked
+whether they go to the library at least once a week.
+The answers and the gender of the students are shown below. 
+\begin{center}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{lccccccccccccccccc}
+\toprule
+Answer & no & yes & no & no & no & yes & no & yes & yes & yes & yes & no & yes & no & yes & no & no \\
+Gender & m & f & f & m & m & m & f & f & f & f & m & m & f & m & f & m & m \\
+\hline
+Answer & no & yes & yes & yes & no & no & yes & no & no & yes & yes & no & no & yes & no & yes & no \\
+Gender & f & m & f & f & f & m & f & m & m & f & f & m & m & f & f & f & m\\
+\bottomrule
+\end{tabular}
+}
+\end{center}
+
+\begin{enumerate}
+\item Create a data set with the variables \variable{answer} and \variable{gender}.
+\item Compute the confidence interval for the difference between the proportions of females and males that use the
+library at least once a week.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Parametric tests > Proportions > Test for comparing two proportions}.
+\item In the dialog displayed insert the variable \variable{answer} in the field \field{Compare} and 
+the variable \variable{gender} in the field \field{According to}.
+\item Insert the value \variable{yes} in the field \field{Proportion of}.
+\item In the frame \field{Populations to compare} insert the value \variable{f} in the field \field{Compare population} and the value \variable{m} in the field \field{With population}.
+\item In the \mtab{Test options} enter $0.95$ in the field \field{Confidence level} and click the button
+\button{Submit}.
+\end{enumerate}
+We can conclude that there are significant differences between the proportions, with the confidence level set, if the
+confidence interval doesn't contain zero. 
+\end{indication}
+\end{enumerate}
+
+\item In a course there are two groups of students, one in the morning and the other in the afternoon.
+In the morning group 55 students of 80 passed, while in the afternoon group 32 students of 90 passed.
+Are there significant differences between the percentages of students that passed in the morning and in the afternoon?
+Can we conclude that the timetable is the cause of the differences?
+Justify the answer. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Parametric tests > Proportions > Test for comparing two proportions}.
+\item In the dialog displayed check the box \option{Manual entry of frequencies}, enter $55$ in the field \field{Sample
+frequency 1}, enter 80 in the field \field{Sample size 1}, enter 32 in the field \field{Sample frequency 2}, enter 90 in
+the field \field{Sample size 2} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+\end{enumerate}
+
+
+\section{Proposed exercises}
+\begin{enumerate}[leftmargin=*] 
+\item  In a study to determine the relation between the physical exercise and the level cholesterol in blood, a sample
+of 11 persons was drawn. 
+The participants cholesterol level (in mg/dl) before and after doing a program of physical exercises is shown below. 
+\begin{center}
+\begin{tabular}{lrrrrrrrrrrr}
+\toprule
+Cholesterol before & 182 & 232 & 191 & 200 & 148 & 249 & 276 & 213 & 241 & 280 & 262 \\
+Cholesterol after  & 198 & 210 & 194 & 220 & 138 & 220 & 219 & 161 & 210 & 213 & 226 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+\item Compute the 95\% confidence interval for the mean of the difference of cholesterol level before and after doing
+exercise.
+\item Compute the 99\% confidence interval for the mean of the difference of cholesterol level before and after doing
+exercise.
+\item According to the previous confidence intervals, what can you conclude about the effect of physical exercise on
+cholesterol?
+\end {enumerate}
+
+\item In a pool performed in two hospital of a city patients were asked whether they were satisfied with the treatment. 
+In the first hospital 200 patients were asked and 140 answered yes, while in the second hospital 300 patients were asked
+and 180 answered yes. 
+\begin{enumerate}
+\item Compute the confidence interval for the difference of proportions of patients satisfied in each hospital.
+\item Is there a significant difference, with a significance level $0.01$, between the proportions of people satisfied
+in each hospital?
+\end{enumerate}
+
+\item The data set \variable{neonates} of the package \variable{rk.Teaching}, contains information about a
+sample of 320 newborns that meet the normal gestation time in a hospital during one year.
+Do the following operations:
+\begin{enumerate}
+\item Compute the confidence interval for the difference between the weight means of neonates of non-smoker and smoker
+mothers.
+How much increase on average the weight of a newborn of a non-smoker mother compared to that of a smoker mother? 
+
+\item Considering only the sample of neonates of mothers that didn't smoke during the pregnancy, compute the confidence
+interval for the difference between the weight means of neonates of mothers that didn't smoke before the pregnancy and
+mothers that smoked before the pregnancy.
+Has the fact of smoking before the pregnancy a significant influence on the weight of neonates? 
+
+\item Compute the confidence interval for the mean of the difference between the APGAR scores at 1 minute and at 5
+minutes.
+How is the evolution of neonates during the first minutes of life?
+\item If neonates with an APGAR score at 1 minute less than or equal to 3 are considered depressed, compute the 90\%
+confidence interval for the difference between the proportions of depressed neonates with a smoker mother and with
+a non-smoker mother.
+Have the fact of smoking during the pregnancy a significant influence in the depression of neonates?
+\item Have the age of the mother a significant influence in the depression of neonates?
+\end{enumerate}
+\end{enumerate}

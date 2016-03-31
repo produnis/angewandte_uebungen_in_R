@@ -18,3 +18,9 @@
 \contentsline {chapter}{\numberline {5}Non-linear regression}{23}{chapter.5}
 \contentsline {section}{\numberline {5.1}Solved exercises}{23}{section.5.1}
 \contentsline {section}{\numberline {5.2}Proposed exercises}{26}{section.5.2}
+\contentsline {chapter}{\numberline {6}Confidence intervals for one population}{27}{chapter.6}
+\contentsline {section}{\numberline {6.1}Solved exercises}{27}{section.6.1}
+\contentsline {section}{\numberline {6.2}Proposed exercises}{29}{section.6.2}
+\contentsline {chapter}{\numberline {7}Confidence intervals for comparing two populations}{31}{chapter.7}
+\contentsline {section}{\numberline {7.1}Solved exercises}{31}{section.7.1}
+\contentsline {section}{\numberline {7.2}Proposed exercises}{33}{section.7.2}
