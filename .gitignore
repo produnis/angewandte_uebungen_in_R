@@ -18,6 +18,7 @@
 *.synctex.gz
 *.synctex.gz(busy)
 *.pdfsync
+*.toc
 
 # amsthm
 *.thm
@@ -48,5 +49,4 @@
 *.sh
 /tmp/
 
-/statistics_practices_rkteaching.pdf
-/statistics_practices_rkteaching.toc
+
