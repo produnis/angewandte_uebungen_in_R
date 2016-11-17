@@ -1,0 +1,369 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es)
+
+\chapter{Probability}\label{cha:probability}
+
+\section{Solved exercises}
+\begin{enumerate}[leftmargin=*] 
+\item Construct the probability space of the following random experiments:
+\begin{enumerate}
+\item Draw a card from a Spanish deck of cards. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Probability > Gambling > Cards > Probability space}.
+\item In the dialog shown, enter 1 in the field \field{Number of cards} and click the button \button{Submit}. 
+\end{enumerate}
+\end{indication}
+\item Toss two coins.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Probability > Gambling > Coins > Probability space}.
+\item In the dialog shown, enter 2 in the field \field{Number of coins} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Roll two dice. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Probability > Gambling > Dice > Probability space}.
+\item In the dialog shown, enter 2 in the field \field{Number of dice} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Roll two dice and toss two coins. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Probability > Combine independent probability spaces}.
+\item In the dialog shown, select the data sets generated before corresponding to the probability spaces of rolling two dice and tossing two coins and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+\end{enumerate}  
+
+\item Repeat the random experiment of tossing two coins 10 times, 100 times, 1000 times and 1000000 times and compute the relative frequency of every random event. 
+Where does the frequencies tend to?
+Construct the probability space of the experiment and observe if it satisfies the law of large numbers, that is, that the frequency of each event tends to the probability of the event. 
+\begin{indication}
+To conduct the experiment:
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Probability > Gambling > Coins > Tossing coins}.
+\item In the dialog shown, enter 2 in the field \field{Number of coins}, enter 10 in the field \field{Number of repetitions}, check the box \option{Frequency distribution} and click the button \button{Submit}.
+\end{enumerate}
+Repeat the previous steps but entering 100, 1000 and 1000000 respectively in the field \option{Number of repetitions}.
+
+To construct the probability space:
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Probability > Gambling > Coins > Probability space}.
+\item In the dialog shown, enter 2 in the field \field{Number of coins} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item In a cupboard there are three boxes of a medicine A, two boxes of medicine B and a box of medicine C. 
+Construct the probability spaces of the following random experiments:
+\begin{enumerate}
+\item Pick three boxes randomly without replacement. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Probability > Gambling > Urn > Probability space}.
+\item In the dialog shown, check the box \option{List objects}, enter the values A,A,A,B,B,C in the field \field{Object list}, enter 3 in the field \field{Number of extractions}, and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Pick three boxes randomly without replacement. 
+\begin{indication}
+Repeat the previous steps but checking the box \option{With replacement}.
+\end{indication}
+\end{enumerate}
+
+% \opt{largo}{\item Gregor Mendel, monje austríaco, desarrollo en el siglo XIX los principios fundamentales de genética.
+% Mendel demostró que las características heredables se transmiten en unidades discretas que se heredan por separado en cada generación.
+% Estas unidades discretas, que Mendel llamó \emph{elemente}, se conocen hoy como \emph{genes}.
+% 
+% Cada característica hereditaria depende de dos factores separados que provienen uno de cada progenitor.
+% Estos factores son los \emph{alelos} de cada gen, que pueden ser \emph{dominantes} (cuando se expresan en el fenotipo sin tener en cuenta el
+% otro alelo) o \emph{recesivos} (que se expresa sólo cuando el otro alelo es igual).
+% 
+% Mendel demostró que en the reproducción los alelos se combinan aleatoriamente and de manera independiente para formar el gen del hijo.
+% 
+% En uno de sus experimentos cruzó dos plantas de gisantes con idéntico genotipo Aa and Bb, donde el primer gen se refiere al color del guisante
+% (A amarillo and a verde) and el segundo gen se refiere a the forma del guisante (B liso and b rugoso). Se pide:
+% \begin{enumerate}
+% \item Construir el probability space correspondiente al genotipo del gen del color. 
+% ¿Cuál es the probability que the planta resultante diese guisantes con fenotipo amarillo? 
+% ¿Y verde?
+% \begin{indication}
+% Para construir el probability space: 
+% \begin{enumerate}
+% \item Crear un data set \variable{mendel.color} con the variable \variable{alelo.color.progenitor} con los dos posibles alelos del
+% progenitor correspondientes al gen del color (A and a).
+% \item Select the menu \menu{Teaching > Probability > Construir espacio probabi\-lís\-tico}.
+% \item In the dialog shown select el data set \variable{mendel.color}, darle el nombre
+% \variable{mendel.color.ep} al probability space and click the button \button{Submit}.
+% \item Select the menu \menu{Teaching > Probability > Repetir espacio probabilís\-ti\-co}.
+% \item In the dialog shown select el data set \variable{mendel.color.ep}, enter 2 en el field
+% \field{Número de repeticiones}, darle el mismo nombre al probability space resultante and click the button \button{Submit}. 
+% \end{enumerate}
+% Para calcular the probability de fenotipo amarillo:
+% \begin{enumerate}
+% \item Select the menu \menu{Teaching > Probability > Compute probability}.
+% \item In the dialog shown select el probability space \variable{mendel.color.ep}, enter
+% \command{alelo.color.progenitor.1=="\mbox{A}"\ | alelo.color.pro\-genitor.2=="\mbox{A}"} en el field \field{Event} and click the
+% button \button{Submit}.
+% \end{enumerate}
+% Para calcular the probability de fenotipo verde:
+% \begin{enumerate}
+% \item Select the menu \menu{Teaching > Probability > Compute probability}.
+% \item In the dialog shown select el probability space \variable{mendel.color.ep}, enter
+% \command{alelo.color.progenitor.1=="\mbox{a}"\ \& alelo.color.pro\-genitor.2=="\mbox{a}"} en el field \field{Event} and click the
+% button \button{Submit}.
+% \end{enumerate}
+% \end{indication}
+% 
+% \item Construir el probability space correspondiente al genotipo de ambos genes. 
+% ¿Cuál es the probability que the planta resultante diese guisantes con fenotipo amarillo and liso? 
+% ¿Y verde and rugoso?
+% \begin{indication}
+% Para construir el probability space: 
+% \begin{enumerate}
+% \item Crear un data set \variable{mendel.forma} con the variable \variable{alelo.forma.progenitor} con los dos posibles alelos del
+% progenitor correspondientes al gen de the forma (B and b).
+% \item Select the menu \menu{Teaching > Probability > Construir probability space}.
+% \item In the dialog shown select el data set \variable{mendel.forma}, darle el nombre
+% \variable{mendel.forma.ep} al probability space and click the button \button{Submit}.
+% \item Select the menu \menu{Teaching > Probability > Repetición de probability space}.
+% \item In the dialog shown select el data set \variable{mendel.forma.ep}, darle el mismo nombre al espacio
+% probabilístico resultante and click the button \button{Submit}. 
+% \item Select the menu \menu{Teaching > Probability > Combinación de espacios probabilísticos independientes}.
+% \item In the dialog shown, select los conjuntos de datos correspondientes a los espacios probalísticos
+% \variable{mendel.color.ep} and \variable{mendel.forma.ep},  darle el nombre \variable{mendel.color.forma.ep} al espacio
+% probabilístico resultante and click the button \button{Submit}.
+% \end{enumerate}
+% Para calcular the probability de fenotipo amarillo and liso:
+% \begin{enumerate}
+% \item Select the menu \menu{Teaching > Probability > Compute probability}.
+% \item In the dialog shown select el probability space \variable{mendel.color.forma.ep}, enter
+% \command{(alelo.color.progenitor.1=="\mbox{A}"\ | alelo.color.\-pro\-genitor.2=="\mbox{A}")\ \& (alelo.forma.progenitor.1=="B"\ |
+% alelo.for\-ma.\-pro\-genitor.2=="B")} en el field \field{Event}, and click the button \button{Submit}.
+% \end{enumerate}
+% Para calcular the probability de fenotipo verde and rugoso:
+% \begin{enumerate}
+% \item Select the menu \menu{Teaching > Probability > Compute probability}.
+% \item In the dialog shown select el probability space \variable{mendel.color.forma.ep}, enter
+% \command{alelo.color.progenitor.1=="\mbox{a}"\ \& alelo.color.\-pro\-genitor.2=="\mbox{a}"\ \& alelo.forma.progenitor.1== "\mbox{b}"\ \&
+% alelo.forma.\-progenitor.2=="\mbox{b}"} en el field \field{Event} and click the button \button{Submit}.
+% \end{enumerate}
+% \end{indication}
+% \end{enumerate}
+% }
+
+\item An epidemiological investigation has been carried out in a population to determine the lifetime prevalence of three common diseases of childhood: chickenpox, measles and rubella.
+The observed frequencies appears in the table below. 
+\begin{center} 
+\begin{tabular}{cccr}
+\toprule
+Chickenpox & Measles & Rubella & Frequency\\
+No & No & No & 2654\\
+No & No & Yes & 1436\\
+No & Yes & No & 1682\\
+No & Yes & Yes & 668\\
+Yes & No & No & 1747\\
+Yes & No & Yes & 476\\
+Yes & Yes & No & 876\\
+Yes & Yes & Yes & 265\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+\item Create a data set \variable{chilhood.diseases} with the variables \variable{chickenpox}, \variable{measles},
+\variable{rubella} and \variable{frequency} and enter the data of the table. 
+
+\item Create the probability space of the population.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Probability > Probability space}.
+\item In the dialog shown enter the data set \variable{chilhood.diseases} in the field \field{Data set}, check the box \option{Define frequencies}, enter the variable \variable{frequency} in the \field{Frequency}, give the name
+\variable{chilhood.diseases.pe} to the new data set containing the probability space and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}  
+
+\item Compute the probability that a person of the population has had the chickenpox. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Probability > Compute probability}.
+\item In the dialog shown enter the data set \variable{chilhood.diseases.pe} in the field \field{Probability space}, enter \command{chickenpox=="Yes"} in the field \field{Event} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication} 
+
+\item Compute the probability that a person of the population has had the chickenpox or the measles. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Probability > Compute probability}.
+\item In the dialog shown enter the data set \variable{chilhood.diseases.pe} in the field \field{Probability space}, enter
+\command{chickenpox=="Yes"\ | measles=="Yes"} in the field \field{Event} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication} 
+
+\item Compute the probability that a person of the population has had the measles and the rubella. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Probability > Compute probability}.
+\item In the dialog shown enter the data set \variable{chilhood.diseases.pe} in the field \field{Probability space}, enter
+\command{measles=="Yes"\ \& rubella=="Yes"} in the field \field{Event} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication} 
+
+\item Compute the probability that a person of the population has had the chickenpox if he or she has had measles.
+Are independent the events of having had chickenpox and having had measles?
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Probability > Compute probability}.
+\item In the dialog shown enter the data set \variable{chilhood.diseases.pe} in the field \field{Probability space}, enter
+\command{chickenpox=="Yes"} in the field \field{Event}, check the box \option{Conditional probability}, enter \command{measles=="No"} in the field \field{Condition} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication} 
+
+\item Compute the probability that a person of the population has not had the rubella nor the measles if he or she has had the chickenpox. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Probability > Compute probability}.
+\item In the dialog shown enter the data set \variable{chilhood.diseases.pe} in the field \field{Probability space}, enter
+\command{rubella=="No"\ \& measles=="No"} in the field \field{Event}, check the box \option{Conditional probability}, enter \command{chickenpox=="Yes"} int the field \field{Condition} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication} 
+\end{enumerate}
+
+
+\item A pregnancy test has been applied to a sample of women, getting the following results
+\begin{center}
+\begin{tabular}{ccr}
+\toprule
+Pregnancy & Test & Frequency\\ 
+No & $-$ & 3876\\
+No & $+$ & 47\\
+Yes & $-$ & 12\\
+Yes & $+$ & 131\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+\item Create a data set \variable{pregnancy.test} with the variables \variable{pregnancy}, \variable{test}, and \variable{frequency} and enter the data of the table.
+
+\item Create a probability space from the sample. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Probability > Probability space}.
+\item In the dialog shown select the data set \variable{test.pregnancy}, check the box
+\option{Define frequencies}, enter the variable \variable{frequency} int the field \field{Frequency}, give the name 
+\variable{pregnancy.test.pe} to the new data set with the probability space and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}  
+
+\item Compute the prevalence of pregnancy.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Probability > Compute probability}.
+\item In the dialog shown enter the data set \variable{pregnancy.test.pe} in the field \field{Probability space}, enter
+\command{pregnancy=="Yes"} in the field \field{Event} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication} 
+
+\item Compute the probability of having a positive outcome in the test.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Probability > Compute probability}.
+\item In the dialog shown enter the data set \variable{pregnancy.test.pe} in the field \field{Probability space}, enter
+\command{test=="\mbox{+}"} in the field \field{Event} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication} 
+
+\item Compute the sensitivity of the test. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Probability > Compute probability}.
+\item In the dialog shown enter the data set \variable{pregnancy.test.pe} in the field \field{Probability space}, enter
+\command{test=="\mbox{+}"} in the field \field{Event}, check the box \option{Conditional probability}, enter
+\command{pregnancy=="Yes"} in the field \field{Condition} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication} 
+
+\item Compute the specificity of the test.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Probability > Compute probability}.
+\item In the dialog shown enter the data set \variable{pregnancy.test.pe} in the field \field{Probability space}, enter
+\command{test=="\mbox{-}"} in the field \field{Event}, check the box \option{Conditional probability}, enter
+\command{pregnancy=="No"} in the field \field{Condition} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication} 
+
+\item Compute the positive predictive value of the test. 
+Is this test useful to detect a pregnancy? 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Probability > Compute probability}.
+\item In the dialog shown enter the data set \variable{pregnancy.test.pe} in the field \field{Probability space}, enter
+\command{pregnancy=="Yes"} in the field \field{Event}, check the box \option{Conditional probability}, enter
+\command{test=="\mbox{+}"} in the field \field{Condition} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication} 
+
+\item Compute the negative predictive value of the test.
+Is this test useful to rule out a pregnancy?
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Probability > Compute probability}.
+\item In the dialog shown enter the data set \variable{pregnancy.test.pe} in the field \field{Probability space}, enter
+\command{pregnancy=="No"} en el field \field{Event}, check the box \option{Conditional probability}, enter
+\command{test=="\mbox{-}"} in the field \field{Condition} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication} 
+\end{enumerate} 
+
+\end{enumerate}
+
+
+\section{Proposed exercises}
+\begin{enumerate}[leftmargin=*]
+\item Create the sample space of the random experiment consisting on tossing a coin, rolling a die and drawing a card from a Spanish deck of cards. 
+
+\item To see the effectiveness of a vaccine against flu, a sample of 1000 persons was drawn from the a population. 
+The table below summarize the number of persons that were or not vaccinated and that got or not the flu. 
+\begin{center}
+\begin{tabular}{ccr}
+\toprule
+Vaccine & Flu & Frequency\\
+No & No & 418\\
+No & Yes & 312\\
+Yes & No & 233\\
+Yes & Yes & 37\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+\item Create a probability space from the sample.
+\item Compute the probability of having been vaccinated against the flu.  
+\item Compute the prevalence of the flu. 
+\item Compute the probability of having flu after having been vaccinated.
+Is the vaccine effective?
+\end{enumerate}
+
+\item To see the effectiveness of a diagnostic test to diagnose ebola in a Central African country, the test was applied to a sample o persons. 
+The outcome of the test was positive in 147 persons with ebola, but also in 28 persons without ebola. 
+On the other hand, the outcome of the test was negative in 97465 persons without ebola, but also in 65 persons with ebola.
+
+\begin{enumerate}
+\item Create the probability space of the diagnostic test.
+\item Compute the prevalence of ebola in the country. 
+\item Compute the probability of having a negative outcome in the test. 
+\item Compute the sensitivity and the specificity of the test. 
+\item Is more effective the test to detect the ebola or to rule out it?
+\end{enumerate} 
+\end{enumerate}
+
+
+
+
+
+
+
