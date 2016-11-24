@@ -1,0 +1,326 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es)
+
+\chapter{Continuous Random Variables}
+
+\section{Solved exercises}
+\begin{enumerate}[leftmargin=*]
+\item Suppose that a bus passes by a bus stop every 15 minutes and that a person can arrive at the bus stop at any moment with the same likelihood. 
+Then, the variable that measures the waiting time for the bus follows an Uniform probability distribution model $U(0,15)$, since any waiting time between 0 and 15 minutes has the same likelihood of happening. 
+\begin{enumerate}
+\item Plot the graph of the density function of the waiting time. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Uniform > Probability graph}.
+\item In the dialog shown, enter \command{0} in the field \field{Minimum}, enter \command{15} in the field
+\field{Maximum} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Plot the graph of the distribution function of the waiting time. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Uniform > Probability graph}.
+\item In the dialog shown, enter \command{0} in the field \field{Minimum}, enter \command{15} in the field
+\field{Maximum}, check the box \option{Distribution function} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute the probability of waiting for the bus less than $5$ minutes.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Uniform > Probabilities}.
+\item In the dialog shown, enter \command{5} in the field \field{Values of the variable}, enter \command{0} in the field \field{Minimum}, enter \command{15} in the field \field{Maximum} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute the probability of waiting for the bus more than $12$ minutes.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Uniform > Probabilities}.
+\item In the dialog shown, enter \command{12} in the field \field{Values of the variable}, enter \command{0} in the field \field{Minimum}, enter \command{15} in the field \field{Maximum}, check the box \option{Upper} in the field \field{Accumulation tail} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute the probability of waiting for the bus between $5$ and $10$ minutes.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Uniform > Probabilities}.
+\item In the dialog shown, enter \command{5, 10} in the field \field{Values of the variable}, enter \command{0} in the field \field{Minimum}, enter \command{15} in the field \field{Maximum} and click the button \button{Submit}.
+\end{enumerate}
+La probability $P(5\leq X\leq 10)$ is the difference between the probabilities obtained $P(X\leq 10)-P(X\leq 5)$.
+\end{indication}
+
+\item Compute the time such that half of the times the person have to wait for the bus less than that time.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Uniform  > Quantiles}.
+\item In the dialog shown, enter \command{0.5} in the field \field{Cumulative probabilities},
+enter \command{0} in the field \field{Minimum}, enter \command{15} in the field \field{Maximum} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute the time such that 10\% of the times the person have to wait for the bus more than that time.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Uniform  > Quantiles}.
+\item In the dialog shown, enter \command{0.1} in the field \field{Cumulative probabilities},
+enter \command{0} in the field \field{Minimum}, enter \command{15} in the field \field{Maximum}, check the box \option{Upper} in the field \field{Accumulation tail} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+\end{enumerate}
+
+
+\item The random variable following a Normal probability distribution model with mean 0 and standard deviation 1, $Z\sim N(0,1)$, it is known as the Standard Normal.  
+\begin{enumerate}
+\item Plot the graph of the density function of $Z$.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Normal > Probability graph}.
+\item In the dialog shown, enter \command{0} in the field \field{Mean}, enter \command{1} in the field \field{Standard deviation} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item How does affect the mean and the standard deviation to the shape of the Gauss bell?
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Normal > Probability graph}.
+\item In the dialog shown, check the box \option{Preview}.
+\item Change the value of the mean and observe how changes the shape of the Gauss bell.
+\item Then change the value of the standard deviations and observe how changes the shape of the Gauss bell.
+\end{enumerate}
+\end{indication}
+
+\item Plot the graph of the distribution function of $Z$.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Normal > Probability graph}.
+\item In the dialog shown, enter \command{0} in the field \field{Mean}, enter \command{1} in the field \field{Standard deviation}, check the box \option{Distribution function} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute the probability $P(Z<-1)$. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Normal > Probabilities}.
+\item In the dialog shown, enter \command{-1} in the field \field{Values of the variable}, enter \command{0} in the field \field{Mean}, enter \command{1} in the field \field{Standard deviation}, and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute the probability $P(Z>1)$. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Normal > Probabilities}.
+\item In the dialog shown, enter \command{1} in the field \field{Values of the variable}, enter \command{0} in the field \field{Mean}, enter \command{1} in the field \field{Standard deviation}, check the box \option{Upper} in the field \field{Accumulation tail} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute the probability that $Z$ takes a value between the mean minus the standard deviation and the mean plus the standard deviation, that is, $P(-1\leq Z\leq 1)$. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Normal > Probabilities}.
+\item In the dialog shown, enter \command{-1, 1} in the field \field{Values of the variable}, enter \command{0} in the field \field{Mean}, enter \command{1} in the field \field{Standard deviation}, and click the button \button{Submit}.
+\end{enumerate}
+The probability $P(-1\leq Z\leq 1)$ is the difference between the probabilities obtained \mbox{$P(Z\leq 1)-P(Z\leq -1)$}.
+\end{indication}
+
+\item Compute the probability that $Z$ takes a value between the mean minus two times the standard deviation and the mean plus two times the standard deviation, that is, \mbox{$P(-2\leq Z\leq 2)$}. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Normal > Probabilities}.
+\item In the dialog shown, enter \command{-2, 2} in the field \field{Values of the variable}, enter \command{0} in the field \field{Mean}, enter \command{1} in the field \field{Standard deviation}, and click the button \button{Submit}.
+\end{enumerate}
+The probability $P(-2\leq Z\leq 2)$ is the difference between the probabilities obtained \mbox{$P(Z\leq 2)-P(Z\leq -2)$}.
+\end{indication}
+
+\item Compute the probability that $Z$ takes a value between the mean minus three times the standard deviation and the mean plus three times the standard deviation, that is, \mbox{$P(-3\leq Z\leq 3)$}. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Normal > Probabilities}.
+\item In the dialog shown, enter \command{-3, 3} in the field \field{Values of the variable}, enter \command{0} in the field \field{Mean}, enter \command{1} in the field \field{Standard deviation}, and click the button \button{Submit}.
+\end{enumerate}
+The probability $P(-3\leq Z\leq 3)$ is the difference between the probabilities obtained \mbox{$P(Z\leq 3)-P(Z\leq -3)$}.
+\end{indication}
+
+\item Compute the quartiles.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Normal > Quantiles}.
+\item In the dialog shown, enter \command{0.25, 0.5, 0.75} in the field \field{Cumulative probabilities}, enter \command{0} in the field \field{Mean}, enter \command{1} in the field \field{Standard deviation} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute the value of the standard normal with a lower probability tail of $0.95$.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Normal > Quantiles}.
+\item In the dialog shown, enter \command{0.95} in the field \field{Cumulative probabilities}, enter \command{0} in the field \field{Mean}, enter \command{1} in the field \field{Standard deviation} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute the value of the standard normal with an upper probability tail of $0.025$.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Normal > Quantiles}.
+\item In the dialog shown, enter \command{0.025} in the field \field{Cumulative probabilities}, enter \command{0} in the field \field{Mean}, enter \command{1} in the field \field{Standard deviation}, check the box \option{Upper} in the field \field{Accumulation tail} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+\end{enumerate}
+
+
+% \item El teorema central del límite establece que the variable resultante de sumar 30 o más variables independientes
+% sigue una distribución normal de media the suma de las medias de cada una de las variables and de varianza the suma de sus
+% varianzas.
+% Esta es the explicación de que una gran parte de las variables continuas que aparecen en the naturaleza sean variables
+% normales.
+% Para observar de manera experimental el teorema central del límite se realiza un experimento que consiste en lanzar
+% varios dados muchas veces and sumar los valores obtenidos. 
+% Se pide:
+% \begin{enumerate}
+% \item Simular el lanzamiento de un dado 100000 veces and dibujar el diagrama de barras asociado. 
+% ¿Tiene forma de campana de Gauss?
+% \begin{indication}Para generar los lanzamientos del dado: 
+% \begin{enumerate}
+% \item Select the menu \menu{Teaching >Simulaciones>Lanzamiento de dados}.
+% \item In the dialog shown, enter 1 in the field \field{Número de dados}, enter 100000 en el
+% field \field{Número de lanzamientos}, select the opción \option{Incluir suma}, enter un nombre para el conjunto
+% de datos and click the button \button{Submit}.
+% \end{enumerate}
+% Para dibujar el diagrama de barras:
+% \begin{enumerate}
+% \item Select the menu \menu{Teaching>Gráficos>Diagrama de barras}.
+% \item In the dialog shown select the variable \variable{sum}.
+% \item En the solapa \menu{Opciones de las barras}, select the opción \option{Frequencies relativas} and hacer clic en
+% el button \button{Submit}.
+% \end{enumerate}}
+% \end{indication}
+% 
+% \item Repetir el apartado anterior con 2 and 30 dados. 
+% ¿Se cumple el teorema central del límite?
+% \end{enumerate}
+
+
+\item If $X_1,\ldots ,X_n$ are $n$ independent standard normal variables, then the variable $X=X_1^2 + \ldots + X_n^2$ follows a probability distribution model Chi-square with $n$ degrees of freedom $\chi^2(n)$. 
+Let $X$ be a variable following a Chi-square probability distribution model with 6 degrees of freedom, $\chi^2(6)$. 
+\begin{enumerate}
+\item Plot the graph of the density function of $X$.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Chi-square > Probability graph}.
+\item In the dialog shown, enter \command{6} in the field \field{Degrees of freedom} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+
+\item Compute the probability $P(X<6)$.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Chi-square > Probabilities}.
+\item In the dialog shown, enter \command{6} in the field \field{Values of the variable}, enter \command{6} in the field \field{Degrees of freedom} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute the 5th percentile.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Chi-square > Quantiles}.
+\item In the dialog shown, enter \command{0.05} in the field \field{Cumulative probabilities}, enter \command{6} in the field \field{Degrees of freedom} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute el value with an upper probability tail of $0.1$.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Chi-square > Quantiles}.
+\item In the dialog shown, enter \command{0.1} in the field \field{Cumulative probabilities}, enter \command{6} in the field \field{Degrees of freedom}, check the box \option{Upper} in the field \field{Accumulation tail} and click the button \button{Submit}.  
+\end{enumerate}
+\end{indication}
+\end{enumerate}
+
+
+\item If $Y$ is a Chi-square variable with $n$ degrees of freedom and $Z$ a standard normal variable independents, then the variable $X=\frac{Z}{\sqrt{Y/n}}$ follows a Student's t probability distribution model with $n$ degrees of freedom, $T(n)$. 
+Let $X$ be a variable following a Student's t probability distribution model with 8 degrees of freedom, $T(8)$.
+
+\begin{enumerate}
+\item Plot the graph of the density function of $X$ and compare it with the standard normal one.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Student's t> Probability graph}.
+\item In the dialog shown, enter \command{8} in the field \field{Degrees of freedom} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute the 8th percentile.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Student's t > Quantiles}.
+\item In the dialog shown, enter \command{0.08} in the field \field{Cumulative probabilities}, enter \command{8} in the field \field{Degrees of freedom} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute el value such that 5\% of the population is above that value.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Student's t > Quantiles}.
+\item In the dialog shown, enter \command{0.05} in the field \field{Cumulative probabilities}, enter \command{8} in the field \field{Degrees of freedom}, check the box \option{Upper} in the field \field{Accumulation tail} and click the button \button{Submit}.  
+\end{enumerate}
+\end{indication}
+\end{enumerate}
+
+
+\item If $Y_1$ and $Y_2$ are two independent Chi-square variables with $n$ and $m$ degrees of freedom respectively, then the variable
+\[
+X=\frac{Y_1/n}{Y_2/m}
+\]
+follows a Fishers' F probability distribution model with $n$ and $m$ degrees of freedom, $F(n,m)$. 
+Let $X$ be a variable following a Fisher's F probability distribution model with $10$ and $20$ degrees of freedom, $F(10,20)$. 
+
+\begin{enumerate}
+\item Plot the graph of the density function of $X$.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Fishers' F > Probability graph}.
+\item In the dialog shown, enter \command{10} in the field \field{Numerator degrees of freedom}, enter \command{20} in the field \field{Denominator degrees of freedom} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute the probability $P(X>1)$. 
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Fishers' F > Probabilities}.
+\item In the dialog shown, enter \command{1} in the field \field{Values of the variable}, enter \command{10} in the field \field{Numerator degrees of freedom}, enter \command{20} in the field \field{Denominator degrees of freedom}, check the box \option{Upper} in the field \field{Accumulation tail} and click the button \button{Submit}.
+\end{enumerate}
+\end{indication}
+
+\item Compute the interquartile range.
+\begin{indication}
+\begin{enumerate}
+\item Select the menu \menu{Teaching > Distributions > Continuous > Fishers' F > Quantiles}.
+\item In the dialog shown, enter \command{0.25, 0.75} in the field \field{Cumulative probabilities}, enter \command{10} in the field \field{Numerator degrees of freedom}, enter \command{20} in the field \field{Denominator degrees of freedom} and click the button \button{Submit}.
+\end{enumerate}
+The interquartile range is the difference between the third and the first quartiles. 
+\end{indication}
+\end{enumerate}
+
+\end{enumerate}
+
+
+\section{Proposed exercises}
+\begin{enumerate}[leftmargin=*]
+\item It is known that the glucose level in blood of diabetic persons follows a normal distribution model with
+mean 106 mg/100 ml and standard deviation 8 mg/100 ml.
+\begin{enumerate}
+\item Calculate the probability of a random diabetic person having a glucose level less than 120 mg/100 ml. 
+\item What percentage of persons have a glucose level between 90 and 120 mg/100 ml?
+\item Calculate and interpret the first quartile of the glucose level. 
+\end{enumerate}
+
+\item It is known that the cholesterol level in males 30 years old follows a normal distribution with mean 220 mg/dl and
+standard deviation 30 mg/dl. 
+If there are 20000 males 30 years old in the population,
+\begin{enumerate}
+\item how many of them have a cholesterol level between 210 and 240 mg/dl?
+\item If a cholesterol level greater than 250 mg/dl can provoke a thrombosis, how many of them are in risk of
+thrombosis?
+\item Calculate the cholesterol level above which 20\% of the males are?
+\end{enumerate}
+\end{enumerate}

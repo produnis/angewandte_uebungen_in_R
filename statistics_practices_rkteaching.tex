@@ -17,8 +17,8 @@
 
 % Font settings
 \usepackage{fontspec}
-\setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
 \usepackage{unicode-math}
+\setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
 \setmathfont[math-style=ISO,bold-style=ISO,vargreek-shape=TeX]{TeX Gyre Pagella Math}
 
 % Color
@@ -36,7 +36,8 @@
 \definecolor{chaptergrey}{RGB}{5,161,230} % Blue color of CEU logo
 
 % Math support
-\usepackage{amsmath} 
+\usepackage{amsmath}
+\usepackage{mathspec}
 
 % Line breaking
 \usepackage{microtype} 
@@ -206,10 +207,10 @@ urlcolor = magenta,          % color of external links
 \input{chapters/linear_regression/linear_regression}
 \input{chapters/non_linear_regression/non_linear_regression}
 \input{chapters/probability/probability}
-%\input{discrete_random_variables/discrete_random_variables}
-%\input{continous_random_variables/continous_random_variables}
-%\input{chapters/confidence_intervals_1_sample/confidence_intervals_1_sample}
-%\input{chapters/confidence_intervals_2_samples/confidence_intervals_2_samples}
+\input{chapters/discrete_random_variables/discrete_random_variables}
+\input{chapters/continuous_random_variables/continuous_random_variables}
+\input{chapters/confidence_intervals_1_sample/confidence_intervals_1_sample}
+\input{chapters/confidence_intervals_2_samples/confidence_intervals_2_samples}
 %\input{chapters/hypothesis_tests/hypothesis_tests}
 %\input{chapters/anova_1_factor/anova_1_factor}
 %\input{anova_2_factors/anova_2_factors}
