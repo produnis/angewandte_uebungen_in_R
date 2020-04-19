@@ -187,9 +187,8 @@ Do the following operations:
 Is the linear model a good model to explain the metabolization of alcohol?
 \begin{indication}
 \begin{enumerate}
-\item Select the menu \menu{Teaching > Regression > Linear regression}.
-\item In the dialog displayed insert the variable \variable{alcohol} in the field \field{Dependent variable}, the
-variable \variable{time} in the field \field{Independent variable(s)}, and click the button \button{Submit}.
+\item Select the menu \menu{Teaching > Regression > Correlation}.
+\item In the dialog displayed insert the variables \variable{alcohol} and \variable{time} in the field \field{Variables}, and click the button \button{Submit}.
 \end{enumerate}
 \end{indication}
 
@@ -209,8 +208,18 @@ To remove the outlier in the data edition windows, right-click the header row co
 \option{Delete this row}.
 \end{indication}
 
+\item Use the regression line of alcohol on time to estimate the speed of alcohol metabolization. 
+\begin{indication}
+  \begin{enumerate}
+  \item Select the menu \menu{Teaching > Regression > Linear regression}.
+  \item In the dialog displayed insert the variable \variable{alcohol} in the field \field{Dependent variable}, the variable \variable{time} in the field \field{Independent variable(s)}, and click the button \button{Submit}.
+  \item The speed of alcohol metabolization is the slope of the regression line.
+  \end{enumerate}
+\end{indication}
+
+
 \item If, according to the law, the maximum concentration of alcohol in blood to drive is $0.3$ g/l, how much
-time must wait this person to drive after drinking a liter of wine?
+time must wait this person to drive after drinking a litter of wine?
 Is this prediction reliable?
 \begin{indication}
 To compute the regression line:
