@@ -41,48 +41,24 @@ The GUI that we are going to use along these practices is \emph{RKWard}, develop
 Friedrichsmeier, and the package rk.Teaching developed by Alfredo Sánchez Alberca in the CEU San Pablo
 University and specifically designed for teaching Statistics.
 
+\begin{center}
+  \includegraphics[width=\textwidth]{chapters/introduction/img/rkward}
+\end{center}
+
 The main goal of this chapter is to introduce the student to the use of RKWard and rk.Teaching, showing him the basic
 operations to enter and manipulate data.
 
 \section{Installation}
-\subsection{Installation of R}
-\begin{description}
-\item[Linux] In the Debian distribution and derivatives (Ubuntu, Kubuntu, etc.) is as easy as typing the following
-command in the command prompt
-\begin{lstlisting}
-> sudo apt-get install r-base-html r-cran-rcmdr r-cran-rodbc r-doc-html r-recommended
-\end{lstlisting}
-\item[Windows] Download from \url{http://cran.es.r-project.org/bin/windows/base/release.htm} the installation program,
-execute it and follow the instructions. 
-\end{description}
+The installation of the required software for these practices depends on the operating system.
 
-\subsection{Intallation of RKWard and rk.Teaching}
-The GUI RKWard can be downloaded from the web \url{http://rkward.sourceforge.net/} where there are instructions for
-the different platforms.
+\subsection{Windows}
+For Windows there is an installation bundle that included R, RKWard and rkTeaching. The installation program can be downloaded from \url{https://aprendeconalf.es/en/project/rkteaching/#installation-on-windows}.
 
-For Windows it is recommended to install the full package that contains R, RKWard and rk.Teaching available in  
-\url{http://aprendeconalf.es/rkteaching/}
+\subsection{MacOs}
+For MacOs, R must be installed first, after RKWard and finally the package rkTeaching. The steps to do the installation are described at \url{https://aprendeconalf.es/en/project/rkteaching/#installation-on-mac-os}.
 
-By default, the installation of R includes the basic packages for the most common operations or analysis.
-However, for other analysis is required to install additional packages, like for instance the package
-\variable{rkTeaching}, that includes menus and dialogs for most of the statistical procedures teached in these
-practices. 
-
-To install the package rk.Teching, first you have to download it from the web
-\url{http://asalber.github.io/rkTeaching/}, then start R or RKWard and enter the following command in the command
-console.
-\begin{lstlisting}
-> setwd("path_to_download")
-> install.packages("rk.Teaching",repos=NULL,dep=True)
-\end{lstlisting}
-
-For packages hosted in the CRAN, it's possible to install them from RKWard selecting the
-menu \menu{Settings > Manage R packages and plugins}.
-In the dialog displayed, select the \mtab{Install/Update/Remove R packages} tab, then search or select the desired
-package and click the button \button{OK}.
-After installing a package, to use it in a work session it must be loaded. 
-For that, in the same menu, select the \mtab{Load/Unload R packages} tab, then select the package, click the button
-\button{Load} and finally the button \button{OK}.
+\subsection{Linux}
+For Linux, R must be installed first, after RKWard and finally the package rkTeaching. The steps to do the installation are described at \url{https://aprendeconalf.es/en/project/rkteaching/#installation-on-linux}.
 
 
 \section{Solved exercises}
@@ -94,7 +70,7 @@ For that, in the same menu, select the \mtab{Load/Unload R packages} tab, then s
 \multicolumn{1}{|c|}{Name} & \multicolumn{1}{c|}{Gender} & \multicolumn{1}{c|}{Weight} & \multicolumn{1}{c|}{Height} &
 \multicolumn{1}{c|}{Cholesterol}\\
 \hline
-José Luis Martínez Izquierdo  & H &  85 & 179 & 182\\
+José Luis Martínez Izquierdo  & M &  85 & 179 & 182\\
 Rosa Díaz Díaz & F & 65 & 173 & 232\\
 Javier García Sánchez  & M & 71 & 181 & 191\\
 Carmen López Pinzón & F &  65 & 170 & 200\\
