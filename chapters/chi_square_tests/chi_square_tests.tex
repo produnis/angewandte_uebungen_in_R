@@ -68,7 +68,7 @@
 \begin{enumerate}
 \item Select the menu \texttt{Teaching > Non-parametric tests > Chi-square test of inde\-pendence}.
 \item In the dialog shown select the variable \variable{ulcer} in the field
-\field{Dependent variable}, select the variable \variable{blood.type} in the field \field{Independent variable}, and click the button \button{Submit}.
+\field{Row variable}, select the variable \variable{blood.type} in the field \field{Column variable}, and click the button \button{Submit}.
 \end{enumerate}
 \end{indication}
 
@@ -102,7 +102,7 @@
 \begin{enumerate}
 \item Select the menu \texttt{Teaching > Non-parametric tests > Chi-square test of inde\-pendence}.
 \item In the dialog shown select the variable \variable{blood.type} in the field
-\field{Dependent variable}, select the variable \variable{region} in the field \field{Independent variable}, and click the button \button{Submit}.
+\field{Row variable}, select the variable \variable{region} in the field \field{Column variable}, and click the button \button{Submit}.
 \end{enumerate}
 \end{indication}
 
@@ -117,7 +117,7 @@
 \begin{indication}
 \begin{enumerate}
 \item Select the menu \texttt{Teaching > Non-parametric tests > Chi-square test of inde\-pendence}.
-\item In the dialog shown select the variable \variable{smoke} in the field \field{Dependent variable}, select the variable \variable{gender} in the field \field{Independent variable}.
+\item In the dialog shown select the variable \variable{smoke} in the field \field{Row variable}, select the variable \variable{gender} in the field \field{Column variable}.
 \item In the \mtab{Test options} tab check the box \option{Fisher's exact test}, and click the
 button \button{Submit}.
 \end{enumerate}
@@ -149,12 +149,11 @@ Drug 2 & Yes & No& Yes & No & No & Yes& No & Yes & No & No\\
 \begin{enumerate}
 \item Create a data set with the variables \variable{relief.drug1}, and \variable{relief.drug2}.
 
-\item Perform the Chi-square test to determine if the relief depends on the drug.  
+\item Perform the McNemar's test to determine if the relief depends on the drug.  
 \begin{indication}
 \begin{enumerate}
-\item Select the menu \texttt{Teaching > Non-parametric tests > Chi-square test of inde\-pendence}.
-\item In the dialog shown select the variable \variable{relief.drug1} in the field \field{Dependent variable}, select the variable \variable{relief.drug2} in the field \field{Independent variable}.
-\item In the \mtab{Test options} tab check the box \option{McNemar's test for paired data}, and click the button \button{Submit}.
+\item Select the menu \texttt{Teaching > Non-parametric tests > McNemar test of indepen\-dence}.
+\item In the dialog shown select the variable \variable{relief.drug1} in the field \field{Row variable}, select the variable \variable{relief.drug2} in the field \field{Column variable}, and click the button \button{Submit}.
 \end{enumerate}
 \end{indication}
 
