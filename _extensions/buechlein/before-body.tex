@@ -1,0 +1,34 @@
+%\thispagestyle{empty}			% hier bitte keine Seitenzahl
+%\clearpage
+\renewcommand\pagemark{{\usekomafont{pagenumber}\thepage\ of \pageref{LastPage}}}
+\clearpairofpagestyles
+\ohead{$title$}
+$if(veranstaltung)$
+\ihead{$veranstaltung$}
+$endif$
+\cfoot{\pagemark}
+\let\endtitlepage\relax
+
+\begin{titlepage}
+%\vspace*{-30mm}
+\begin{center}
+\noindent\rule[1ex]{\textwidth}{0.5pt}
+ \Huge \textbf{$title$}\\[4mm]
+\end{center}
+\noindent\rule[1ex]{\textwidth}{0.5pt}
+ \normalsize
+%\vspace{26mm}
+\vfill
+
+{\centering
+ \fbox{\includegraphics[width=0.8\textwidth]{_extensions/buechlein/cover.png}}\\
+\vfill
+\Large $subtitle$ \\[10mm]
+\normalsize zusammengestellt von\\   $author$
+\vfill
+\scriptsize Version vom $date$\normalsize
+
+}
+\end{titlepage}
+\clearpage
+\setcounter{page}{1}

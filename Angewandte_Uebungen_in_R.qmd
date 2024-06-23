@@ -1,5 +1,6 @@
 --- 
 title: "Angewandte Übungen in R"
+subtitle: "Über 300 Aufgaben und Lösungswege für 80 Fragen in 12 Themengebieten der biomedizinischen Statistik."
 author:
   - name: Prof. Dr. Jörg große Schlarmann
     url: https://www.produnis.de/R
@@ -7,19 +8,16 @@ author:
     affiliation-url: https://www.hs-niederrhein.de
     orcid: 0000-0002-3634-7722
 date: 2024-06-22
-veranstaltung: "MA 61.191 Statistik mit R und RStudio"
+veranstaltung: "Statistik mit R und RStudio"
 bibliography: literatur.bib
-csl: apa-single-spaced.csl
+csl: _extensions/buechlein/apa-single-spaced.csl
 nocite: |
   @grSchlR
 language:
   crossref-sec-prefix: "Abschnitt"
 number-sections: true
-format:
-  hsnr-themenblatt-pdf:
-    code-line-numbers: false
-    lot: false
-    lof: false
+format: buechlein-pdf
+    
 ---
 
 \smallskip\ 
@@ -42,6 +40,8 @@ In diesem Script wollen wir Übungsaufgaben zu verschiedenen Teilen der Statisti
 
 
 ## Lizenz {-}
+
+![](_extensions/buechlein/ccbyncsa.png){width=2cm}
 
 Die Aufgaben stammen von @gimeno_applied_2022. Und da dieses Script darauf aufbaut, ist es ebenfalls unter `CC BY-NC-SA 4.0`^[siehe <https://creativecommons.org/licenses/by-nc-sa/4.0/>] lizensiert.
 

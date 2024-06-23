@@ -15,7 +15,7 @@ contributes:
         - right=20mm 
         - headsep=15mm
       df-print: kable
-      code-line-numbers: true # false
+      code-line-numbers: false # false
       keep-tex: false # true # false
       lang: de
       date-format: "DD.MM.YYYY"
@@ -23,8 +23,8 @@ contributes:
       logowidth: 101.4mm
       logo: HSNRfb10.png
       toc: true
-      lof: true
-      lot: true
+      lof: false
+      lot: false
       include-in-header: in-header.tex   # header
       template-partials: 
         - title.tex
