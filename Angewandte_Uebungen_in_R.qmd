@@ -7,7 +7,7 @@ author:
     affiliation: Hochschule Niederrhein
     affiliation-url: https://www.hs-niederrhein.de
     orcid: 0000-0002-3634-7722
-date: 2024-06-22
+date: 2024-06-25
 veranstaltung: "Statistik mit R und RStudio"
 bibliography: literatur.bib
 csl: _extensions/buechlein/apa-single-spaced.csl
@@ -4390,9 +4390,16 @@ result <- data.frame(Modell = c("quadratisch", "exponentiell",
                                  summary(s)$r.square))
 # Anzeigen
 result[order(result$R.square, decreasing = TRUE),]
+
+```
+
+Wir können für den Vergleich auch die Funktion `compare.lm()` aus dem `jgsbook`-Paket verwenden.
+
+```{r}
+#| label: Loesung-D2c2
+jgsbook::compare.lm(diet$weight.loss, diet$days)
 ```
 Das sigmoidale Modell kann die Daten am besten erklären, da in diesem Modell das Bestimmtheitsmaß am größten ist.
-
 :::
 
 
@@ -4612,9 +4619,20 @@ Nach 6,436209 Stunden sind 100 mg/dl erreicht.
 
 ```{r}
 #| label: Loesung-E1a
+#| eval: false
 # lade Kartenspiele
 load(url("https://www.produnis.de/R/data/cards.RData"))
+```
 
+```{r}
+#| label: Loesung-E1a2
+#| include: false
+# lade Kartenspiele
+load("data/cards.RData")
+```
+
+```{r}
+#| label: Loesung-E1a3
 # ziehe Karte
 sample(poker, 1)
 
@@ -6417,7 +6435,7 @@ Da die untere Grenze des Konfidenzintervalls größer als 0,7 ist, können wir b
 :::
 
 
-\newpage
+\bigskip\ 
 
 
 ## Lösung zur Aufgabe [-@sec-H05] {#sec-LH05}
@@ -6455,7 +6473,7 @@ Die obere Grenze des 99\%-Konfidenzintervall ist größer als 210. Wird dies ber
 
 
 
-\newpage
+\bigskip\ 
 
 
 ## Lösung zur Aufgabe [-@sec-H06] {#sec-LH06}
@@ -6668,7 +6686,7 @@ Das 95\%-Intervall lässt einen Unterschied vermuten. Das 99\%-Intervall hingege
 
 
 
-\newpage
+\bigskip\ 
 
 
 
@@ -6750,7 +6768,7 @@ Hof1 hat `r d$estimate[1] - d$estimate[2]`  mehr Fett in der Milch als Hof2. Da 
 
 
 
-
+\newpage
 
 
 
