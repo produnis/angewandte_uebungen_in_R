@@ -7976,3 +7976,5 @@ Hochschule Niederrhein, Krefeld
 [joerg.grosseschlarmann@hs-niederrhein.de](mailto:joerg.grosseschlarmann@hs-niederrhein.de)
 
 <https://www.produnis.de/R>
+
+<https://github.com/produnis/angewandte_uebungen_in_R>
