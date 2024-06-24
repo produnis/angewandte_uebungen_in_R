@@ -4431,13 +4431,16 @@ ggplot(diet, aes(x=days, y=weight.loss)) +
 Auch die Vorhersagewerte für die Idealkurve können mittels `compare.lm()` und dem Parameter `predict=TRUE` erzeugt werden.
 ```{r}
 #| label: Loesung-D2d2
-#| layout-ncol: 2
 help <- jgsbook::compare.lm(diet$weight.loss, diet$days, 
                             predict=TRUE)
 
 # anschauen                            
 head(help)
+```
 
+```{r}
+#| label: Loesung-D2d3
+#| layout-ncol: 2
 # plot()
 plot(diet$days, diet$weight.loss)
 lines(help$pred.x, help$sigm, col="purple")
