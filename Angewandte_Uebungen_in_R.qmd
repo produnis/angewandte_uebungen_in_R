@@ -4427,6 +4427,31 @@ ggplot(diet, aes(x=days, y=weight.loss)) +
 	geom_line(data=helper, aes(x=tage, y=vorhersage, linetype="Sigmoidal"))
 ```
 
+
+Auch die Vorhersagewerte für die Idealkurve können mittels `compare.lm()` und dem Parameter `predict=TRUE` erzeugt werden.
+```{r}
+#| label: Loesung-D2d2
+#| layout-ncol: 2
+help <- jgsbook::compare.lm(diet$weight.loss, diet$days, 
+                            predict=TRUE)
+
+# anschauen                            
+head(help)
+
+# plot()
+plot(diet$days, diet$weight.loss)
+lines(help$pred.x, help$sigm, col="purple")
+
+# ggplot()
+ggplot(diet, aes(x=days, y=weight.loss)) + 
+  geom_point(color="#FF9999", size=3) +
+	# Legend
+	scale_linetype("Regression model") +
+	# Sigmoidal model
+	geom_line(data=help, aes(x=pred.x, y=sigm, linetype="Sigmoidal"))
+```
+
+
 :::
 
 
@@ -4460,6 +4485,9 @@ result1 <- data.frame(Modell = c("quadratisch", "exponentiell",
                                   summary(l1)$r.square,
                                   summary(s1)$r.square))
 result1[order(result1$R.square, decreasing = TRUE),]
+
+# oder mittels compare.lm()
+jgsbook::compare.lm(df1$weight.loss, df1$days)
 ```
 Das sigmoidale Modell liefert wieder die beste Erklärung der Daten.
 :::
@@ -4493,7 +4521,10 @@ result2 <- data.frame(Modell = c("quadratisch", "exponentiell",
                                   summary(e2)$r.square,
                                   summary(l2)$r.square,
                                   summary(s2)$r.square))
-result2[order(result2$R.square, decreasing = TRUE),]
+result2[order(result1$R.square, decreasing = TRUE),]
+
+# oder mittels compare.lm()
+jgsbook::compare.lm(df2$weight.loss, df2$days)
 ```
 Das sigmoidale Modell liefert auch hier die beste Erklärung der Daten.
 :::
