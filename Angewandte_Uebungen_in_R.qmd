@@ -41,7 +41,7 @@ In diesem Script wollen wir Übungsaufgaben zu verschiedenen Teilen der Statisti
 
 ## Lizenz {-}
 
-![](_extensions/buechlein/ccbyncsa.png){width=2cm}
+![](_extensions/buechlein/ccbyncsa.png){width=2.2cm}
 
 Die Aufgaben stammen von @gimeno_applied_2022. Und da dieses Script darauf aufbaut, ist es ebenfalls unter `CC BY-NC-SA 4.0`^[siehe <https://creativecommons.org/licenses/by-nc-sa/4.0/>] lizensiert.
 
