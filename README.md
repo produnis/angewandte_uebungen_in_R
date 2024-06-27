@@ -9,7 +9,8 @@ Alfredo Sánchez Alberca (asalber@ceu.es)
 http://aprendeconalf.es
 
 ## translation
-Jörg große Schlarmann
+
+- Jörg große Schlarmann, `orcid 0000-0002-3634-7722`
 
 In diesem Script wollen wir Übungsaufgaben zu verschiedenen Teilen der Statistik vorstellen und mit `R` lösen. Die Aufgaben stammen von Gimeno et al. (siehe <https://github.com/asalber/statistics_practice_rkteaching>). Dort werden die Lösungswege unter Verwendung der Software `RKWard` (siehe <https://rkward.kde.org/>) besprochen, jedoch wird dabei kein R-Code verwendet.
 
