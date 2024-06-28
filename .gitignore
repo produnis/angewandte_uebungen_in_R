@@ -6,3 +6,7 @@ _src
 AngewandteÜbungen_Titelbild*
 _freeze
 /.quarto/
+*.log
+*.tex
+*_files
+*.aux
