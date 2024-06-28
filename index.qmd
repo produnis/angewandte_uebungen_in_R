@@ -5,6 +5,7 @@ Dort werden die Lösungswege nur teilweise und ausschließlich unter Verwendung 
 
 Im vorliegenden Script werden die Lösungen Schritt für Schritt erarbeitet. Der R-Code stammt von Jörg große Schlarmann.
 
+\smallskip\ 
 
 ## Lizenz {.unnumbered}
 

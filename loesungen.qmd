@@ -463,7 +463,7 @@ ggplot(df, aes(x=Alter, fill=Familienstand)) +
 
 :::
 
-\smallskip\ 
+\newpage
 
 
 ## Lösung zur Aufgabe [-@sec-A05] {#sec-L05}
@@ -1182,7 +1182,7 @@ IQR(df$Punkte, type=6)
 
 
 
-\smallskip\  
+\newpage  
 
 ## Lösung zur Aufgabe [-@sec-B04] {#sec-LB04}
 ::: {.callout-tip}
@@ -2865,7 +2865,7 @@ sample(boxen, 3, replace=TRUE)
 :::
 
 
-
+\newpage
 
 
 
@@ -4569,7 +4569,7 @@ Die obere Grenze des 99\%-Konfidenzintervall ist größer als 210. Wird dies ber
 
 
 
-\bigskip\ 
+\newpage
 
 
 ## Lösung zur Aufgabe [-@sec-H06] {#sec-LH06}
@@ -4782,7 +4782,7 @@ Das 95\%-Intervall lässt einen Unterschied vermuten. Das 99\%-Intervall hingege
 
 
 
-\bigskip\ 
+\newpage
 
 
 
@@ -5624,7 +5624,7 @@ Keines der Intervalle schließt die 0 ein. Alle Therapien unterscheiden sich jew
 
 
 
-\newpage
+
 
 ## Lösung zur Aufgabe [-@sec-K02] {#sec-LK02}
 
@@ -5688,7 +5688,7 @@ Es gibt einen Unterschied zwischen Schule B und Schule D. In Schule B sind die L
 :::
 
 
-\newpage
+\bigskip\ 
 
 
 ## Lösung zur Aufgabe [-@sec-K03] {#sec-LK03}
@@ -6024,7 +6024,7 @@ chisq.test(df$bestanden, df$Geschlecht)
 Es kann kein signifikanter Unterschied gezeigt werden.
 :::
 
-
+\newpage
 
 ## Lösung zur Aufgabe [-@sec-AL08] {#sec-LL08}
 

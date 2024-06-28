@@ -654,7 +654,8 @@ c) 2 Würfeln werfen.
 ::: {.callout-tip appearance="simple"}
 Für die Lösung siehe @sec-LE01
 :::
-\smallskip\ 
+
+\newpage
 
 ### Aufgabe [-@sec-E02] Münzwürfe {#sec-E02}
 ::: {.callout-note appearance="simple" icon=false}
@@ -754,7 +755,7 @@ Für die Lösung siehe @sec-LE05
 
 ### Aufgabe [-@sec-E06] Glückspielwahrscheinlichkeiten {#sec-E06}
 ::: {.callout-note appearance="simple" icon=false}
-Erstelle den Ereignisraum des Zufallsexperiments, das aus dem Werfen einer Münze, dem Werfen eines Würfels und dem Ziehen einer Karte aus einem spanischen Kartenspiel besteht.
+Erstelle den Ereignisraum des Zufallsexperiments, das aus dem Werfen einer Münze, dem Werfen eines Würfels und dem Ziehen einer Karte aus einem französischen Kartenspiel besteht.
 
 :::
 
@@ -1479,7 +1480,9 @@ a) Gibt es signifikante Unterschiede zwischen den Prozentsätzen der Studiereden
 ::: {.callout-tip appearance="simple"}
 Für die Lösung siehe @sec-LJ05
 :::
-\smallskip\ 
+
+
+\newpage
 
 
 
