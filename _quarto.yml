@@ -1,0 +1,75 @@
+project:
+  type: book
+  output-dir: PDF
+
+author:
+    - name: Prof. Dr. Jörg große Schlarmann
+      url: https://www.produnis.de/R
+      affiliation: Hochschule Niederrhein
+      affiliation-url: https://www.hs-niederrhein.de
+      orcid: 0000-0002-3634-7722
+
+citation:
+  type: book
+  title: "Angewandte Übungen in R"
+  publisher: "Hochschule Niederrhein"
+  publisher-place: "Krefeld"
+  language: de
+  status: "advance online publication"
+  license: "CC BY-NC-SA 4.0"
+
+book:
+  title: "Angewandte Übungen in R"
+  subtitle: "Über 300 Aufgaben und Lösungswege für 80 Fragen in 12 Themengebieten der biomedizinischen Statistik."
+  language: de
+  author:
+    - name: Prof. Dr. Jörg große Schlarmann
+      url: https://www.produnis.de/R
+      affiliation: Hochschule Niederrhein
+      affiliation-url: https://www.hs-niederrhein.de
+      orcid: 0000-0002-3634-7722
+  date: "2024-06-28"
+  date-format: "DD.MM.YYYY"
+  chapters:
+    - index.qmd
+    - aufgaben.qmd
+    - loesungen.qmd
+    - literatur.qmd
+    - credits.qmd
+
+bibliography: literatur.bib
+nocite: |
+  @Rbase, @wickham23
+csl: _src/apa-single-spaced.csl
+language:
+  crossref-sec-prefix: "Abschnitt"
+  crossref-chap-prefix: "Abschnitt"
+freeze: auto
+
+format:
+    pdf:
+      documentclass: scrreprt
+      papersize: a4paper
+      fontsize: 11pt
+      geometry:
+        - top=30mm
+        - bottom=30mm
+        - left=20mm
+        - right=20mm
+        - headsep=15mm
+      df-print: default
+      code-line-numbers: false # false
+      keep-tex: false # true # false
+      lang: de
+      linkcolor: black
+      logowidth: 101.4mm
+      logo: _src/HSNRfb10.png
+      toc: false
+      lof: false
+      lot: false
+      link-citations: true
+      include-in-header: _src/in-header.tex   # header
+      template-partials:
+        - _src/title.tex
+        - _src/before-body.tex
+
