@@ -36,7 +36,10 @@ library(tidyverse)
 
 # Angewandte Übungen in R {-}
 
-In diesem Script wollen wir Übungsaufgaben zu verschiedenen Teilen der Statistik vorstellen und lösen. Die Aufgaben stammen von @gimeno_applied_2022^[siehe <https://github.com/asalber/statistics_practice_rkteaching>]. Dort werden die Lösungswege unter Verwendung der Software RKWard^[siehe <https://rkward.kde.org/>] besprochen. Im vorliegenden Script sollen die Lösungen "zu Fuß" erarbeitet werden. Hierbei kann das freie Nachschlagewerk von @grSchlR hilfreich sein.
+In diesem Script wollen wir Übungsaufgaben zu verschiedenen Teilen der Statistik vorstellen und lösen. Die Aufgaben stammen von @gimeno_applied_2022^[siehe <https://github.com/asalber/statistics_practice_rkteaching>]. 
+Dort werden die Lösungswege nur teilweise und ausschließlich unter Verwendung der Software RKWard^[siehe <https://rkward.kde.org/>] besprochen, jedoch ohne Einsatz von `R`-Code. 
+
+Im vorliegenden Script werden die Lösungen Schritt für Schritt erarbeitet. Der R-Code stammt von Jörg große Schlarmann.
 
 
 ## Lizenz {-}
@@ -44,6 +47,8 @@ In diesem Script wollen wir Übungsaufgaben zu verschiedenen Teilen der Statisti
 ![](_extensions/buechlein/ccbyncsa.png){width=2.2cm}
 
 Die Aufgaben stammen von @gimeno_applied_2022. Und da dieses Script darauf aufbaut, ist es ebenfalls unter `CC BY-NC-SA 4.0`^[siehe <https://creativecommons.org/licenses/by-nc-sa/4.0/>] lizensiert.
+
+\small
 
 Sie dürfen:
 
@@ -86,7 +91,7 @@ große Schlarmann, J (2024): "Angewandte Übungen in R", Hochschule Niederrhein,
 
 # Aufgabenstellung {#sec-Aufgaben}
 
-Versuchen Sie zunächst selbst eine Lösung zu finden bevor Sie sich die Auflösungen anschauen.
+Versuchen Sie zunächst selbst eine Lösung zu finden bevor Sie sich die Auflösungen anschauen. Hierbei kann das freie Nachschlagewerk von @grSchlR hilfreich sein.
 
 ## Häufigkeitsverteilungen {#sec-aufgabeHaeufig}
 
