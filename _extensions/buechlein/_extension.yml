@@ -22,6 +22,7 @@ contributes:
       linkcolor: black
       logowidth: 101.4mm
       logo: HSNRfb10.png
+      link-citations: true
       toc: true
       lof: false
       lot: false
