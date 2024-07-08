@@ -40,36 +40,9 @@ book:
 bibliography: literatur.bib
 nocite: |
   @Rbase, @wickham23
-csl: _src/apa-single-spaced.csl
 language:
   crossref-sec-prefix: "Abschnitt"
   crossref-chap-prefix: "Abschnitt"
 freeze: auto
 
-format:
-    pdf:
-      documentclass: scrreprt
-      papersize: a4paper
-      fontsize: 11pt
-      geometry:
-        - top=30mm
-        - bottom=30mm
-        - left=20mm
-        - right=20mm
-        - headsep=15mm
-      df-print: default
-      code-line-numbers: false # false
-      keep-tex: false # true # false
-      lang: de
-      linkcolor: black
-      logowidth: 101.4mm
-      logo: _src/HSNRfb10.png
-      toc: false
-      lof: false
-      lot: false
-      link-citations: true
-      include-in-header: _src/in-header.tex   # header
-      template-partials:
-        - _src/title.tex
-        - _src/before-body.tex
-
+format: buechlein-pdf
